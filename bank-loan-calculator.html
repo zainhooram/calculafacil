@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Bank Loan &amp; Monthly EMI Calculator — CalculaFácil</title>
+  <meta name="description" content="Accurate reducing-balance bank loan EMI calculator. Compute monthly payment, total interest, optional processing fee, and full monthly amortization table." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Bank Loan &amp; Monthly EMI Calculator — CalculaFácil" />
+  <meta property="og:description" content="Accurate reducing-balance bank loan EMI calculator. Compute monthly payment, total interest, optional processing fee, and full monthly amortization table." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bank Loan &amp; Monthly EMI Calculator — CalculaFácil" />
+  <meta name="twitter:description" content="Accurate reducing-balance bank loan EMI calculator. Compute monthly payment, total interest, optional processing fee, and full monthly amortization table." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Bank Loan / EMI Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/bank-loan-calculator.html","inLanguage":"en","description":"Accurate reducing-balance bank loan EMI calculator. Compute monthly payment, total interest, optional processing fee, and full monthly amortization table.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between reducing-balance interest and flat interest?","acceptedAnswer":{"@type":"Answer","text":"In a reducing-balance loan, interest each month is charged only on the remaining principal balance. In a flat-rate loan, interest is charged on the full original loan amount every month regardless of how much principal you have already repaid."}},{"@type":"Question","name":"Is this an official bank loan quotation?","acceptedAnswer":{"@type":"Answer","text":"No. This calculator provides an independent mathematical estimate and is NOT an official bank quotation. Actual bank payments may differ due to bank fees, credit insurance, local taxes, day-count conventions, rate adjustments, and lender-specific terms."}},{"@type":"Question","name":"Does the calculator handle 0% interest loans?","acceptedAnswer":{"@type":"Answer","text":"Yes. When you enter 0% annual interest, the tool automatically divides the principal evenly across the total number of monthly installments (EMI = P / n)."}},{"@type":"Question","name":"What is included in the monthly amortization schedule?","acceptedAnswer":{"@type":"Answer","text":"For every month of the loan, the table displays the opening balance, monthly payment, principal paid, interest paid, and remaining balance down to zero."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-prestamos.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/bank-loan-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-prestamos.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/bank-loan-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Bank Loan / EMI Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Finance &amp; Personal Money</div>
+        <h1>Bank Loan / EMI Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Calculate your fixed monthly loan installment (Equated Monthly Installment / EMI) using the standard reducing-balance amortization formula. Review total interest payable, optional processing fees, and inspect the complete month-by-month repayment schedule.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="bank-loan" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-3">
+        <div class="form-group">
+          <label for="in-principal">Loan amount</label>
+          <input id="in-principal" type="number" step="any" min="1" value="10000" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-rate">Annual interest rate (%)</label>
+          <input id="in-rate" type="number" step="any" min="0" value="6" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-duration">Loan duration</label>
+          <div style="display:flex;gap:0.5rem;">
+            <input id="in-duration" type="number" step="1" min="1" value="3" class="form-control" />
+            <select id="in-unit" class="form-control" style="max-width:7.5rem;">
+              <option value="years">Years</option>
+              <option value="months">Months</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="in-fee">Processing fee (optional)</label>
+          <input id="in-fee" type="number" step="any" min="0" value="100" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Monthly installment (EMI)</span><span id="out-emi" class="result-value">304,22 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Original loan amount</span><span id="out-principal" class="result-value">10.000,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Total interest payable</span><span id="out-interest" class="result-value">951,90 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Total repayment</span><span id="out-repay" class="result-value">10.951,90 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Processing fee</span><span id="out-fee" class="result-value">100,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Total estimated cost with fee</span><span id="out-totalcost" class="result-value">11.051,90 EUR (€)</span></div>
+        </div>
+        <div class="notice-box">
+          Notice: This calculation uses the reducing-balance EMI formula and is NOT an official bank quotation. Actual bank payments may differ due to bank fees, insurance, taxes, rate changes, and bank-specific terms.
+        </div>
+        <details style="margin-top:1rem;">
+          <summary style="cursor:pointer;font-weight:600;font-size:0.9rem;color:var(--accent);">
+            View full monthly amortization table
+          </summary>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Opening balance</th>
+                  <th>Monthly payment</th>
+                  <th>Principal paid</th>
+                  <th>Interest paid</th>
+                  <th>Remaining balance</th>
+                </tr>
+              </thead>
+              <tbody id="out-schedule-body"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to use the bank loan calculator</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Select your preferred display currency.</li><li style="margin-bottom:0.5rem;">Enter the principal loan amount.</li><li style="margin-bottom:0.5rem;">Enter the annual interest rate (%) — supports 0% for interest-free financing.</li><li style="margin-bottom:0.5rem;">Enter the loan duration and choose either months or years.</li><li style="margin-bottom:0.5rem;">Optionally enter any upfront processing or origination fee.</li><li style="margin-bottom:0.5rem;">Open the monthly amortization table below the summary to inspect every installment.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>For a 10,000.00 USD loan at 6% annual interest over 3 years (36 months) with a 100.00 USD processing fee: your monthly payment (EMI) is 304.22 USD, total interest payable is 951.90 USD, total loan repayment is 10,951.90 USD, and total estimated cost including fee is 11,051.90 USD.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Reducing-balance EMI formula</h2>
+            <div class="formula-box">
+              <div>EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)</div><div>If interest rate is 0%: EMI = P / n</div><div>Where: P = Principal loan amount | r = Monthly interest rate (Annual / 12 / 100) | n = Total monthly installments</div>
+            </div>
+            <p>Unlike flat-rate interest (which charges interest on the original principal every month), reducing-balance loans calculate monthly interest only on the remaining unpaid principal balance.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>What is the difference between reducing-balance interest and flat interest?</h3><p>In a reducing-balance loan, interest each month is charged only on the remaining principal balance. In a flat-rate loan, interest is charged on the full original loan amount every month regardless of how much principal you have already repaid.</p></div></div>
+          <div class="card"><div><h3>Is this an official bank loan quotation?</h3><p>No. This calculator provides an independent mathematical estimate and is NOT an official bank quotation. Actual bank payments may differ due to bank fees, credit insurance, local taxes, day-count conventions, rate adjustments, and lender-specific terms.</p></div></div>
+          <div class="card"><div><h3>Does the calculator handle 0% interest loans?</h3><p>Yes. When you enter 0% annual interest, the tool automatically divides the principal evenly across the total number of monthly installments (EMI = P / n).</p></div></div>
+          <div class="card"><div><h3>What is included in the monthly amortization schedule?</h3><p>For every month of the loan, the table displays the opening balance, monthly payment, principal paid, interest paid, and remaining balance down to zero.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/salary-calculator.html">Salary Calculator</a></h3>
+                  <p>Convert your pay between hourly, daily, weekly, biweekly, monthly, and annual frequencies with optional bonuses and manual deductions.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/salary-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></h3>
+                  <p>Divide total project, operational, or labor cost by total hours to calculate exact hourly and daily cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/hourly-cost-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/discount-calculator.html">Discount Calculator</a></h3>
+                  <p>Calculate the exact discount amount, final sale price, and percentage saved on any purchase or quote.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/discount-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

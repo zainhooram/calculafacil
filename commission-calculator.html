@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Sales Commission Calculator — CalculaFácil</title>
+  <meta name="description" content="Free online commission calculator. Instantly find commission amount, net sales after commission, and total amount including commission." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/commission-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/commission-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Sales Commission Calculator — CalculaFácil" />
+  <meta property="og:description" content="Free online commission calculator. Instantly find commission amount, net sales after commission, and total amount including commission." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/commission-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sales Commission Calculator — CalculaFácil" />
+  <meta name="twitter:description" content="Free online commission calculator. Instantly find commission amount, net sales after commission, and total amount including commission." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Commission Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/commission-calculator.html","inLanguage":"en","description":"Free online commission calculator. Instantly find commission amount, net sales after commission, and total amount including commission.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use this for real estate, affiliate, or sales rep commissions?","acceptedAnswer":{"@type":"Answer","text":"Yes, it works for any percentage-based commission structure across sales, real estate, freelance marketplaces, and payment processors."}},{"@type":"Question","name":"When should I look at Total Including Commission vs. Net After Commission?","acceptedAnswer":{"@type":"Answer","text":"Use Total Including Commission when a buyer pays a fee on top of the base price. Use Net After Commission when a broker or platform deducts its fee from your gross sale."}},{"@type":"Question","name":"Are decimal commission rates supported?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can enter precise decimal rates such as 1.75%, 2.9%, or 8.25%."}},{"@type":"Question","name":"How do I add a base salary to my sales commission?","acceptedAnswer":{"@type":"Answer","text":"Once you know your periodic commission amount, enter it into the Additional Income / Bonus field in our Salary Calculator."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-comisiones.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/commission-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-comisiones.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/commission-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Commission Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Business &amp; Sales</div>
+        <h1>Commission Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Quickly determine sales commissions for sales reps, real estate transactions, affiliate payouts, or marketplace fees. View the exact commission amount alongside both the total with commission added and the net payout with commission deducted.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="commission" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-2">
+        <div class="form-group">
+          <label for="in-sales">Total sales</label>
+          <input id="in-sales" type="number" step="any" min="0" value="5000" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-rate">Commission percentage (%)</label>
+          <input id="in-rate" type="number" step="any" min="0" value="6" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Commission amount</span><span id="out-commission" class="result-value">300,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Total including commission</span><span id="out-total" class="result-value">5.300,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Net after commission</span><span id="out-net" class="result-value">4.700,00 EUR (€)</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to use the commission calculator</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Select your display currency.</li><li style="margin-bottom:0.5rem;">Enter the total sales or transaction amount.</li><li style="margin-bottom:0.5rem;">Enter the commission rate percentage (e.g., 5% or 12.5%).</li><li style="margin-bottom:0.5rem;">View the commission amount, total including commission, and net amount after commission.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>On 5,000.00 USD in total sales at a 6% commission rate: the commission amount is 300.00 USD. Total including commission is 5,300.00 USD, and net proceeds after deducting commission are 4,700.00 USD.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Commission formula</h2>
+            <div class="formula-box">
+              <div>Commission = Sales × Commission Rate / 100</div><div>Total Including Commission = Sales + Commission</div><div>Net After Commission = Sales − Commission</div>
+            </div>
+            <p>Depending on your contract, commission may be paid out from gross sales (reducing net proceeds) or added on top of a base price as a service fee. Both figures are calculated automatically.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>Can I use this for real estate, affiliate, or sales rep commissions?</h3><p>Yes, it works for any percentage-based commission structure across sales, real estate, freelance marketplaces, and payment processors.</p></div></div>
+          <div class="card"><div><h3>When should I look at Total Including Commission vs. Net After Commission?</h3><p>Use Total Including Commission when a buyer pays a fee on top of the base price. Use Net After Commission when a broker or platform deducts its fee from your gross sale.</p></div></div>
+          <div class="card"><div><h3>Are decimal commission rates supported?</h3><p>Yes, you can enter precise decimal rates such as 1.75%, 2.9%, or 8.25%.</p></div></div>
+          <div class="card"><div><h3>How do I add a base salary to my sales commission?</h3><p>Once you know your periodic commission amount, enter it into the Additional Income / Bonus field in our Salary Calculator.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/discount-calculator.html">Discount Calculator</a></h3>
+                  <p>Calculate the exact discount amount, final sale price, and percentage saved on any purchase or quote.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/discount-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></h3>
+                  <p>Calculate gross profit amount, profit margin percentage on sales, and markup percentage on cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/profit-margin-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/salary-calculator.html">Salary Calculator</a></h3>
+                  <p>Convert your pay between hourly, daily, weekly, biweekly, monthly, and annual frequencies with optional bonuses and manual deductions.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/salary-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Calculadora de Margen de Beneficio y Recargo — CalculaFácil</title>
+  <meta name="description" content="Calcula gratis el margen de beneficio, la ganancia por venta y el porcentaje de recargo (markup) a partir del coste y el precio de venta." />
+  <link rel="canonical" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/profit-margin-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Calculadora de Margen de Beneficio y Recargo — CalculaFácil" />
+  <meta property="og:description" content="Calcula gratis el margen de beneficio, la ganancia por venta y el porcentaje de recargo (markup) a partir del coste y el precio de venta." />
+  <meta property="og:url" content="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Margen de Beneficio y Recargo — CalculaFácil" />
+  <meta name="twitter:description" content="Calcula gratis el margen de beneficio, la ganancia por venta y el porcentaje de recargo (markup) a partir del coste y el precio de venta." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Calculadora de margen de beneficio","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html","inLanguage":"es","description":"Calcula gratis el margen de beneficio, la ganancia por venta y el porcentaje de recargo (markup) a partir del coste y el precio de venta.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuál es la diferencia entre margen de beneficio y recargo (markup)?","acceptedAnswer":{"@type":"Answer","text":"El margen de beneficio calcula la ganancia como porcentaje del precio de venta (Beneficio / Venta). El recargo o markup calcula la ganancia como porcentaje del precio de coste (Beneficio / Coste). Por eso, para un mismo producto con ganancia positiva, el porcentaje de recargo siempre es mayor que el margen."}},{"@type":"Question","name":"¿Qué ocurre si el precio de venta es menor que el precio de coste?","acceptedAnswer":{"@type":"Answer","text":"Si vendes por debajo del coste, la calculadora mostrará un beneficio negativo (pérdida) y un porcentaje de margen negativo para alertarte de que la operación no cubre los costes directos."}},{"@type":"Question","name":"¿Incluye este cálculo el IVA u otros impuestos indirectos?","acceptedAnswer":{"@type":"Answer","text":"Para obtener un análisis financiero exacto, se recomienda introducir tanto el precio de coste como el precio de venta sin IVA (importes netos), ya que el impuesto sobre el valor añadido se recauda para la administración tributaria y no forma parte del ingreso real del negocio."}},{"@type":"Question","name":"¿Por qué el margen de beneficio nunca puede superar el 100% si hay un coste positivo?","acceptedAnswer":{"@type":"Answer","text":"Porque el beneficio es igual al precio de venta menos el coste. Mientras el coste sea mayor que cero, el beneficio siempre será inferior al precio de venta total."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/es/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/herramientas/index.html">Herramientas</a>
+        <a href="/es/index.html#categories">Categorías</a>
+        <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-margen-beneficio.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/profit-margin-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Idioma</span>
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-margen-beneficio.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/profit-margin-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Menú móvil">
+      <a href="/es/index.html">Inicio</a>
+      <a href="/es/herramientas/index.html">Herramientas</a>
+      <a href="/es/index.html#categories">Categorías</a>
+      <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/es/index.html">Inicio</a> /
+        <a href="/es/herramientas/index.html">Herramientas</a> /
+        <span>Calculadora de margen de beneficio</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Negocios y Ventas</div>
+        <h1>Calculadora de margen de beneficio</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Conoce al instante la rentabilidad real de tus productos o servicios. Esta calculadora compara tu precio de coste con tu precio de venta para mostrar la ganancia monetaria, el margen de beneficio sobre la venta y el porcentaje de recargo sobre el coste.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="profit-margin" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Moneda de visualización</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Nota: La selección de moneda cambia únicamente el símbolo y formato de visualización. No aplica tipos de cambio.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">Dólar estadounidense (USD $)</option><option value="MXN">Peso mexicano (MXN $)</option><option value="ARS">Peso argentino (ARS $)</option><option value="COP">Peso colombiano (COP $)</option><option value="CLP">Peso chileno (CLP $)</option><option value="GBP">Libra esterlina (GBP £)</option><option value="PKR">Rupia pakistaní (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-2">
+        <div class="form-group">
+          <label for="in-cost">Precio de coste</label>
+          <input id="in-cost" type="number" step="any" min="0" value="60" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-selling">Precio de venta</label>
+          <input id="in-selling" type="number" step="any" min="0" value="100" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box"><span class="result-label">Beneficio neto</span><span id="out-profit" class="result-value">40,00 EUR (€)</span></div>
+          <div class="result-box highlight"><span class="result-label">Margen de beneficio (%)</span><span id="out-margin" class="result-value">40,00%</span></div>
+          <div class="result-box"><span class="result-label">Recargo / Markup (%)</span><span id="out-markup" class="result-value">66,67%</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calcular ahora</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copiar resultados</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copiado al portapapeles (Copied to clipboard)</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>Cómo usar la calculadora de margen de beneficio</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Selecciona tu moneda de visualización preferida (EUR, USD, MXN, ARS, COP, CLP, GBP o PKR).</li><li style="margin-bottom:0.5rem;">Introduce el precio de coste unitario (lo que te cuesta fabricar o adquirir el producto).</li><li style="margin-bottom:0.5rem;">Introduce el precio de venta al que ofreces el producto o servicio a tus clientes.</li><li style="margin-bottom:0.5rem;">Consulta al instante el beneficio monetario, el porcentaje de margen de beneficio y el porcentaje de recargo (markup).</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Ejemplo práctico</h3>
+            <p>Si compras un artículo por 60,00 EUR y lo vendes por 100,00 EUR: tu beneficio es de 40,00 EUR. El margen de beneficio sobre la venta es del 40,00% (40 / 100 × 100), mientras que el recargo sobre el coste es del 66,67% (40 / 60 × 100).</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Fórmulas del margen de beneficio y recargo</h2>
+            <div class="formula-box">
+              <div>Beneficio = Precio de Venta − Precio de Coste</div><div>Margen de Beneficio (%) = (Beneficio / Precio de Venta) × 100</div><div>Recargo o Markup (%) = (Beneficio / Precio de Coste) × 100</div>
+            </div>
+            <p>El margen de beneficio indica qué porcentaje del precio de venta final se convierte en ganancia bruta, mientras que el recargo (markup) muestra cuánto se ha incrementado porcentualmente el precio respecto al coste original.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Espacio publicitario opcional (Contenedor reservado)">
+        <strong>Espacio publicitario opcional (Contenedor reservado)</strong>
+        <div>Contenedor estático preparado para futura integración publicitaria, separado de los controles de la calculadora.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Preguntas frecuentes de esta herramienta</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>¿Cuál es la diferencia entre margen de beneficio y recargo (markup)?</h3><p>El margen de beneficio calcula la ganancia como porcentaje del precio de venta (Beneficio / Venta). El recargo o markup calcula la ganancia como porcentaje del precio de coste (Beneficio / Coste). Por eso, para un mismo producto con ganancia positiva, el porcentaje de recargo siempre es mayor que el margen.</p></div></div>
+          <div class="card"><div><h3>¿Qué ocurre si el precio de venta es menor que el precio de coste?</h3><p>Si vendes por debajo del coste, la calculadora mostrará un beneficio negativo (pérdida) y un porcentaje de margen negativo para alertarte de que la operación no cubre los costes directos.</p></div></div>
+          <div class="card"><div><h3>¿Incluye este cálculo el IVA u otros impuestos indirectos?</h3><p>Para obtener un análisis financiero exacto, se recomienda introducir tanto el precio de coste como el precio de venta sin IVA (importes netos), ya que el impuesto sobre el valor añadido se recauda para la administración tributaria y no forma parte del ingreso real del negocio.</p></div></div>
+          <div class="card"><div><h3>¿Por qué el margen de beneficio nunca puede superar el 100% si hay un coste positivo?</h3><p>Porque el beneficio es igual al precio de venta menos el coste. Mientras el coste sea mayor que cero, el beneficio siempre será inferior al precio de venta total.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Herramientas relacionadas</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></h3>
+                  <p>Determina el precio de venta exacto que debes fijar para alcanzar tu margen de beneficio objetivo.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-precio-venta.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></h3>
+                  <p>Calcula cuántas unidades necesitas vender y qué facturación alcanzar para cubrir todos los costes fijos y variables.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-punto-equilibrio.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></h3>
+                  <p>Averigua cuánto dinero ahorras y cuál es el precio final tras aplicar cualquier porcentaje de descuento.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-descuentos.html">Abrir calculadora &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calcula fácil. Herramientas gratis para tu día a día.</p>
+          <p>CalculaFácil ofrece calculadoras cotidianas de negocios, finanzas personales y utilidades de texto en español e inglés. Rápido, transparente y sin registro.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Todas las herramientas se ejecutan localmente en tu navegador. No requiere registro ni suscripción.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Las 10 Herramientas</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></li>
+            <li><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></li>
+            <li><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></li>
+            <li><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></li>
+            <li><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></li>
+            <li><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></li>
+            <li><a href="/es/herramientas/contador-de-palabras.html">Contador de palabras</a></li>
+            <li><a href="/es/herramientas/contador-de-caracteres.html">Contador de caracteres</a></li>
+            <li><a href="/es/herramientas/calculadora-prestamos.html">Calculadora de préstamos bancarios</a></li>
+            <li><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Información y Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/es/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="/es/contacto.html">Contacto</a></li>
+            <li><a href="/es/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="/es/terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="/es/aviso-legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. Todos los derechos reservados.</span>
+        <span>Contacto: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

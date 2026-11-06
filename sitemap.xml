@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://calculafacil.example.com/es/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/index.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/profit-margin-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/profit-margin-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/profit-margin-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-margen-beneficio.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/selling-price-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/selling-price-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/selling-price-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/break-even-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/hourly-cost-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/hourly-cost-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/hourly-cost-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/commission-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/commission-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/commission-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-comisiones.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/discount-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/contador-de-palabras.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/contador-de-palabras.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/word-counter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/contador-de-palabras.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/word-counter.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/contador-de-palabras.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/word-counter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/contador-de-palabras.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/character-counter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/character-counter.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/character-counter.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/bank-loan-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/herramientas/calculadora-salario.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/salary-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/tools/salary-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/salary-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/sobre-nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/sobre-nosotros.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/sobre-nosotros.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/sobre-nosotros.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/sobre-nosotros.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/contacto.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/contacto.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/politica-privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/politica-privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/politica-privacidad.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/privacy-policy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/politica-privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/politica-privacidad.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/terminos-condiciones.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/terminos-condiciones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/terms-and-conditions.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/terminos-condiciones.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/terms-and-conditions.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/terminos-condiciones.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/terms-and-conditions.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/terminos-condiciones.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/es/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/aviso-legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/legal-disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/aviso-legal.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calculafacil.example.com/en/legal-disclaimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/aviso-legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/legal-disclaimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/aviso-legal.html" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

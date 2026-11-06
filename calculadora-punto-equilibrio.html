@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Calculadora de Punto de Equilibrio (Break-Even) — CalculaFácil</title>
+  <meta name="description" content="Calcula el punto de equilibrio en unidades e ingresos a partir de tus costes fijos, coste variable unitario y precio de venta. Gratis y al instante." />
+  <link rel="canonical" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Calculadora de Punto de Equilibrio (Break-Even) — CalculaFácil" />
+  <meta property="og:description" content="Calcula el punto de equilibrio en unidades e ingresos a partir de tus costes fijos, coste variable unitario y precio de venta. Gratis y al instante." />
+  <meta property="og:url" content="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Punto de Equilibrio (Break-Even) — CalculaFácil" />
+  <meta name="twitter:description" content="Calcula el punto de equilibrio en unidades e ingresos a partir de tus costes fijos, coste variable unitario y precio de venta. Gratis y al instante." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Calculadora de punto de equilibrio","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html","inLanguage":"es","description":"Calcula el punto de equilibrio en unidades e ingresos a partir de tus costes fijos, coste variable unitario y precio de venta. Gratis y al instante.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué se redondean las unidades hacia arriba al siguiente número entero?","acceptedAnswer":{"@type":"Answer","text":"Si el cálculo exacto da 84,2 unidades, vender 84 unidades todavía dejaría una pequeña pérdida sin cubrir. Al vender la unidad 85 se cubren por completo todos los costes fijos."}},{"@type":"Question","name":"¿Qué pasa si el precio de venta es igual o menor que el coste variable?","acceptedAnswer":{"@type":"Answer","text":"Si el precio de venta no supera el coste variable, cada venta genera cero aportación o una pérdida adicional, por lo que es matemáticamente imposible cubrir los costes fijos sin subir el precio o reducir el coste variable."}},{"@type":"Question","name":"¿Qué gastos debo incluir en los costes fijos?","acceptedAnswer":{"@type":"Answer","text":"Incluye todos los gastos que debes pagar vendas o no vendas nada: alquiler del local u oficina, sueldos fijos, cuota de autónomos, contabilidad, licencias de software y seguros."}},{"@type":"Question","name":"¿Cómo puedo reducir mi punto de equilibrio?","acceptedAnswer":{"@type":"Answer","text":"Existen tres formas directas: reducir los costes fijos, disminuir el coste variable por unidad negociando con proveedores, o incrementar el precio de venta por unidad."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/es/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/herramientas/index.html">Herramientas</a>
+        <a href="/es/index.html#categories">Categorías</a>
+        <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-punto-equilibrio.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/break-even-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Idioma</span>
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-punto-equilibrio.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/break-even-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Menú móvil">
+      <a href="/es/index.html">Inicio</a>
+      <a href="/es/herramientas/index.html">Herramientas</a>
+      <a href="/es/index.html#categories">Categorías</a>
+      <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/es/index.html">Inicio</a> /
+        <a href="/es/herramientas/index.html">Herramientas</a> /
+        <span>Calculadora de punto de equilibrio</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Negocios y Ventas</div>
+        <h1>Calculadora de punto de equilibrio</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">El punto de equilibrio (o umbral de rentabilidad) es el volumen mínimo de ventas necesario para que tu negocio no tenga pérdidas ni ganancias. Con esta herramienta sabrás cuántas unidades completas debes vender para cubrir tanto tus costes fijos como los costes variables de cada unidad.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="break-even" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Moneda de visualización</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Nota: La selección de moneda cambia únicamente el símbolo y formato de visualización. No aplica tipos de cambio.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">Dólar estadounidense (USD $)</option><option value="MXN">Peso mexicano (MXN $)</option><option value="ARS">Peso argentino (ARS $)</option><option value="COP">Peso colombiano (COP $)</option><option value="CLP">Peso chileno (CLP $)</option><option value="GBP">Libra esterlina (GBP £)</option><option value="PKR">Rupia pakistaní (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-3">
+        <div class="form-group">
+          <label for="in-fixed">Costes fijos</label>
+          <input id="in-fixed" type="number" step="any" min="0" value="3000" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-variable">Coste variable por unidad</label>
+          <input id="in-variable" type="number" step="any" min="0" value="15" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-selling">Precio de venta por unidad</label>
+          <input id="in-selling" type="number" step="any" min="0" value="40" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Unidades de equilibrio</span><span id="out-units" class="result-value">120</span></div>
+          <div class="result-box"><span class="result-label">Ingresos de equilibrio</span><span id="out-revenue" class="result-value">4.800,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Margen de contribución unitario</span><span id="out-cm" class="result-value">25,00 EUR (€)</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calcular ahora</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copiar resultados</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copiado al portapapeles (Copied to clipboard)</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>Cómo calcular el punto de equilibrio</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Introduce el total de tus costes fijos del período (alquiler, suministros, salarios fijos, seguros, software).</li><li style="margin-bottom:0.5rem;">Introduce el coste variable por unidad (materia prima, embalaje, comisiones por unidad).</li><li style="margin-bottom:0.5rem;">Introduce el precio de venta por unidad (debe ser superior al coste variable unitario).</li><li style="margin-bottom:0.5rem;">Revisa las unidades redondeadas al alza necesarias para alcanzar el equilibrio, los ingresos requeridos y el margen de contribución.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Ejemplo práctico</h3>
+            <p>Si tus costes fijos mensuales son de 3.000,00 EUR, cada producto tiene un coste variable de 15,00 EUR y se vende a 40,00 EUR: el margen de contribución es de 25,00 EUR por unidad. Necesitas vender 120 unidades (3.000 / 25), lo que equivale a 4.800,00 EUR en ingresos.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Fórmula del punto de equilibrio</h2>
+            <div class="formula-box">
+              <div>Margen de Contribución Unitario = Precio de Venta − Coste Variable Unitario</div><div>Unidades de Equilibrio = Costes Fijos / (Precio de Venta − Coste Variable)</div><div>Ingresos de Equilibrio = Unidades de Equilibrio (redondeadas al alza) × Precio de Venta</div>
+            </div>
+            <p>Cada unidad vendida aporta su margen de contribución para pagar los costes fijos. Dado que en la práctica no se suelen vender fracciones de producto, las unidades se redondean al siguiente número entero completo.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Espacio publicitario opcional (Contenedor reservado)">
+        <strong>Espacio publicitario opcional (Contenedor reservado)</strong>
+        <div>Contenedor estático preparado para futura integración publicitaria, separado de los controles de la calculadora.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Preguntas frecuentes de esta herramienta</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>¿Por qué se redondean las unidades hacia arriba al siguiente número entero?</h3><p>Si el cálculo exacto da 84,2 unidades, vender 84 unidades todavía dejaría una pequeña pérdida sin cubrir. Al vender la unidad 85 se cubren por completo todos los costes fijos.</p></div></div>
+          <div class="card"><div><h3>¿Qué pasa si el precio de venta es igual o menor que el coste variable?</h3><p>Si el precio de venta no supera el coste variable, cada venta genera cero aportación o una pérdida adicional, por lo que es matemáticamente imposible cubrir los costes fijos sin subir el precio o reducir el coste variable.</p></div></div>
+          <div class="card"><div><h3>¿Qué gastos debo incluir en los costes fijos?</h3><p>Incluye todos los gastos que debes pagar vendas o no vendas nada: alquiler del local u oficina, sueldos fijos, cuota de autónomos, contabilidad, licencias de software y seguros.</p></div></div>
+          <div class="card"><div><h3>¿Cómo puedo reducir mi punto de equilibrio?</h3><p>Existen tres formas directas: reducir los costes fijos, disminuir el coste variable por unidad negociando con proveedores, o incrementar el precio de venta por unidad.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Herramientas relacionadas</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></h3>
+                  <p>Calcula el beneficio neto por unidad, el porcentaje de margen sobre las ventas y el recargo (markup) sobre el coste.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-margen-beneficio.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></h3>
+                  <p>Determina el precio de venta exacto que debes fijar para alcanzar tu margen de beneficio objetivo.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-precio-venta.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></h3>
+                  <p>Divide el coste total de un proyecto, servicio o empleado entre las horas trabajadas para conocer el coste horario y diario.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-coste-por-hora.html">Abrir calculadora &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calcula fácil. Herramientas gratis para tu día a día.</p>
+          <p>CalculaFácil ofrece calculadoras cotidianas de negocios, finanzas personales y utilidades de texto en español e inglés. Rápido, transparente y sin registro.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Todas las herramientas se ejecutan localmente en tu navegador. No requiere registro ni suscripción.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Las 10 Herramientas</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></li>
+            <li><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></li>
+            <li><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></li>
+            <li><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></li>
+            <li><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></li>
+            <li><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></li>
+            <li><a href="/es/herramientas/contador-de-palabras.html">Contador de palabras</a></li>
+            <li><a href="/es/herramientas/contador-de-caracteres.html">Contador de caracteres</a></li>
+            <li><a href="/es/herramientas/calculadora-prestamos.html">Calculadora de préstamos bancarios</a></li>
+            <li><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Información y Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/es/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="/es/contacto.html">Contacto</a></li>
+            <li><a href="/es/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="/es/terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="/es/aviso-legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. Todos los derechos reservados.</span>
+        <span>Contacto: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

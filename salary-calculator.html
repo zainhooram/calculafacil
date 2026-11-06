@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>International Salary Converter (Hourly to Annual) — CalculaFácil</title>
+  <meta name="description" content="Convert salary across hourly, daily, weekly, biweekly, monthly, and annual pay periods using your working hours and days. Includes bonuses and manual deductions." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/salary-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/salary-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-salario.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="International Salary Converter (Hourly to Annual) — CalculaFácil" />
+  <meta property="og:description" content="Convert salary across hourly, daily, weekly, biweekly, monthly, and annual pay periods using your working hours and days. Includes bonuses and manual deductions." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/salary-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="International Salary Converter (Hourly to Annual) — CalculaFácil" />
+  <meta name="twitter:description" content="Convert salary across hourly, daily, weekly, biweekly, monthly, and annual pay periods using your working hours and days. Includes bonuses and manual deductions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Salary Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/salary-calculator.html","inLanguage":"en","description":"Convert salary across hourly, daily, weekly, biweekly, monthly, and annual pay periods using your working hours and days. Includes bonuses and manual deductions.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are deductions entered manually instead of calculated automatically?","acceptedAnswer":{"@type":"Answer","text":"Income taxes, social contributions, health insurance, and pension deductions vary widely by country, region, filing status, and employer. Allowing you to enter your actual manual deductions prevents misleading or invented tax estimates."}},{"@type":"Question","name":"Is the estimated net salary an official payroll result?","acceptedAnswer":{"@type":"Answer","text":"No. Estimated net salary is for personal planning only and is not an official payroll calculation or tax statement."}},{"@type":"Question","name":"How do working hours per day and days per week affect the results?","acceptedAnswer":{"@type":"Answer","text":"They determine your total working days per year (days/week × 52) and total working hours per year (hours/day × days/week × 52), which are used to convert between hourly/daily rates and annual/monthly salaries."}},{"@type":"Question","name":"What period should I use when entering bonuses and deductions?","acceptedAnswer":{"@type":"Answer","text":"Enter bonuses and manual deductions for the same frequency selected for your base salary (for example, if you selected Monthly salary, enter monthly bonuses and monthly deductions)."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-salario.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/salary-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-salario.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/salary-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Salary Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Finance &amp; Personal Money</div>
+        <h1>Salary Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Accurately convert your compensation across hourly, daily, weekly, biweekly, monthly, and annual pay periods based on your actual working schedule. Add optional bonuses or supplemental income and enter manual deductions to see your estimated net pay for every timeframe.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="salary" class="calc-panel">
+    <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+    <div class="form-grid form-grid-3">
+      <div class="form-group">
+        <label for="in-amount">Salary amount</label>
+        <input id="in-amount" type="number" step="any" min="1" value="2500" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="in-freq">Payment frequency</label>
+        <select id="in-freq" class="form-control">
+          <option value="hourly">Hourly</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="biweekly">Biweekly</option>
+          <option value="monthly" selected>Monthly</option>
+          <option value="annual">Annual</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="in-hday">Working hours per day</label>
+        <input id="in-hday" type="number" step="any" min="0.5" max="24" value="8" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="in-dweek">Working days per week</label>
+        <input id="in-dweek" type="number" step="any" min="1" max="7" value="5" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="in-bonus">Additional income / bonuses (optional)</label>
+        <input id="in-bonus" type="number" step="any" min="0" value="100" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="in-ded">Manual deductions (optional)</label>
+        <input id="in-ded" type="number" step="any" min="0" value="450" class="form-control" />
+      </div>
+    </div>
+    <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+    <div id="hf-calc-results" class="results-area">
+      <div class="results-grid">
+        <div class="result-box"><span class="result-label">Gross annual salary</span><span id="out-gross-annual" class="result-value">30.000,00 EUR (€)</span></div>
+        <div class="result-box"><span class="result-label">Gross monthly salary</span><span id="out-gross-monthly" class="result-value">2.500,00 EUR (€)</span></div>
+        <div class="result-box"><span class="result-label">Gross weekly salary</span><span id="out-gross-weekly" class="result-value">576,92 EUR (€)</span></div>
+        <div class="result-box"><span class="result-label">Gross daily salary</span><span id="out-gross-daily" class="result-value">115,38 EUR (€)</span></div>
+        <div class="result-box"><span class="result-label">Gross hourly salary</span><span id="out-gross-hourly" class="result-value">14,42 EUR (€)</span></div>
+        <div class="result-box highlight"><span class="result-label">Estimated net annual salary</span><span id="out-net-annual" class="result-value">25.800,00 EUR (€)</span></div>
+        <div class="result-box highlight"><span class="result-label">Estimated net monthly salary</span><span id="out-net-monthly" class="result-value">2.150,00 EUR (€)</span></div>
+        <div class="result-box highlight"><span class="result-label">Estimated net hourly salary</span><span id="out-net-hourly" class="result-value">12,40 EUR (€)</span></div>
+      </div>
+      <div class="notice-box">
+        Tax notice: Deductions are manually entered by the user. Actual take-home pay depends on country, tax laws, social contributions, benefits, and employer deductions. Estimated net salary is not an official payroll result.
+      </div>
+    </div>
+    <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+  </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to use the salary calculator</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Select your preferred display currency.</li><li style="margin-bottom:0.5rem;">Enter your base gross salary amount and select its payment frequency (hourly, daily, weekly, biweekly, monthly, or annual).</li><li style="margin-bottom:0.5rem;">Enter your standard working hours per day (e.g., 8) and working days per week (e.g., 5).</li><li style="margin-bottom:0.5rem;">Optionally enter additional income/bonuses and manual deductions (for the same payment frequency selected).</li><li style="margin-bottom:0.5rem;">Review the full breakdown of gross pay, bonuses, deductions, and estimated net pay across all six frequencies.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>A monthly gross salary of 2,500.00 USD (working 8 hours/day, 5 days/week = 2,080 hours/year), plus 100.00 USD monthly bonus and 450.00 USD monthly manual deductions: equals 30,000.00 USD gross per year (14.42 USD gross/hour) and an estimated net salary of 2,150.00 USD per month (25,800.00 USD net per year).</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Salary conversion formulas and assumptions</h2>
+            <div class="formula-box">
+              <div>Weeks per year = 52 | Biweekly periods per year = 26 | Months per year = 12</div><div>Working days per year = Working days per week × 52</div><div>Working hours per year = Working hours per day × Working days per week × 52</div><div>Estimated Net Salary = Gross Salary + Additional Income − Manual Deductions</div>
+            </div>
+            <p>Important tax note: This calculator never invents tax rates or claims automatic tax withholding for every country. Because actual take-home pay depends on national and local tax laws, social security contributions, benefits, and employer deductions, deductions are entered manually by you.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>Why are deductions entered manually instead of calculated automatically?</h3><p>Income taxes, social contributions, health insurance, and pension deductions vary widely by country, region, filing status, and employer. Allowing you to enter your actual manual deductions prevents misleading or invented tax estimates.</p></div></div>
+          <div class="card"><div><h3>Is the estimated net salary an official payroll result?</h3><p>No. Estimated net salary is for personal planning only and is not an official payroll calculation or tax statement.</p></div></div>
+          <div class="card"><div><h3>How do working hours per day and days per week affect the results?</h3><p>They determine your total working days per year (days/week × 52) and total working hours per year (hours/day × days/week × 52), which are used to convert between hourly/daily rates and annual/monthly salaries.</p></div></div>
+          <div class="card"><div><h3>What period should I use when entering bonuses and deductions?</h3><p>Enter bonuses and manual deductions for the same frequency selected for your base salary (for example, if you selected Monthly salary, enter monthly bonuses and monthly deductions).</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></h3>
+                  <p>Divide total project, operational, or labor cost by total hours to calculate exact hourly and daily cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/hourly-cost-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></h3>
+                  <p>Calculate fixed monthly loan installments (EMI), total interest payable, total cost with fees, and a full monthly amortization schedule.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/bank-loan-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/commission-calculator.html">Commission Calculator</a></h3>
+                  <p>Calculate sales commission amount, total including commission, and net proceeds after deducting commission.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/commission-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

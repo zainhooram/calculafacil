@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Calculadora de Préstamos Bancarios y Cuota Mensual — CalculaFácil</title>
+  <meta name="description" content="Simula la cuota mensual de tu préstamo bancario con el sistema de saldo decreciente (amortización francesa), intereses totales y cuadro de amortización." />
+  <link rel="canonical" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/bank-loan-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Calculadora de Préstamos Bancarios y Cuota Mensual — CalculaFácil" />
+  <meta property="og:description" content="Simula la cuota mensual de tu préstamo bancario con el sistema de saldo decreciente (amortización francesa), intereses totales y cuadro de amortización." />
+  <meta property="og:url" content="https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Préstamos Bancarios y Cuota Mensual — CalculaFácil" />
+  <meta name="twitter:description" content="Simula la cuota mensual de tu préstamo bancario con el sistema de saldo decreciente (amortización francesa), intereses totales y cuadro de amortización." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Calculadora de préstamos bancarios","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/es/herramientas/calculadora-prestamos.html","inLanguage":"es","description":"Simula la cuota mensual de tu préstamo bancario con el sistema de saldo decreciente (amortización francesa), intereses totales y cuadro de amortización.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué diferencia hay entre el interés sobre saldo decreciente y el interés plano?","acceptedAnswer":{"@type":"Answer","text":"En el interés sobre saldo decreciente (el estándar bancario habitual), cada mes pagas intereses solo sobre la deuda que aún te queda por devolver. En el interés plano se cobran intereses sobre el importe inicial durante toda la vida del préstamo, lo que resulta mucho más costoso."}},{"@type":"Question","name":"¿Por qué la cuota real de mi banco puede variar respecto a este cálculo?","acceptedAnswer":{"@type":"Answer","text":"Esta calculadora proporciona una estimación matemática independiente y NO constituye una oferta ni cotización oficial bancaria. Los pagos reales pueden variar debido a comisiones bancarias adicionales, seguros vinculados, impuestos locales, redondeos de días exactos o revisiones de tipos variables."}},{"@type":"Question","name":"¿Funciona para préstamos al 0% de interés?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si introduces un 0% de interés anual, la calculadora aplica automáticamente la fórmula lineal (Capital / Número de meses) sin errores de división."}},{"@type":"Question","name":"¿Qué muestra la tabla de amortización mensual?","acceptedAnswer":{"@type":"Answer","text":"Muestra mes por mes el saldo inicial, la cuota pagada, qué parte corresponde a intereses, qué parte reduce tu deuda (capital amortizado) y el saldo pendiente tras cada pago hasta llegar a cero."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/es/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/herramientas/index.html">Herramientas</a>
+        <a href="/es/index.html#categories">Categorías</a>
+        <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-prestamos.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/bank-loan-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Idioma</span>
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-prestamos.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/bank-loan-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Menú móvil">
+      <a href="/es/index.html">Inicio</a>
+      <a href="/es/herramientas/index.html">Herramientas</a>
+      <a href="/es/index.html#categories">Categorías</a>
+      <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/es/index.html">Inicio</a> /
+        <a href="/es/herramientas/index.html">Herramientas</a> /
+        <span>Calculadora de préstamos bancarios</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Finanzas y Ahorro</div>
+        <h1>Calculadora de préstamos bancarios</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Estima la cuota mensual fija (EMI) de un préstamo personal, comercial o hipotecario utilizando la fórmula financiera estándar sobre saldo pendiente decreciente (sistema de amortización francés). Incluye resumen de intereses, comisión de apertura opcional y tabla de amortización mensual completa.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="bank-loan" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Moneda de visualización</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Nota: La selección de moneda cambia únicamente el símbolo y formato de visualización. No aplica tipos de cambio.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">Dólar estadounidense (USD $)</option><option value="MXN">Peso mexicano (MXN $)</option><option value="ARS">Peso argentino (ARS $)</option><option value="COP">Peso colombiano (COP $)</option><option value="CLP">Peso chileno (CLP $)</option><option value="GBP">Libra esterlina (GBP £)</option><option value="PKR">Rupia pakistaní (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-3">
+        <div class="form-group">
+          <label for="in-principal">Importe del préstamo</label>
+          <input id="in-principal" type="number" step="any" min="1" value="10000" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-rate">Interés anual (%)</label>
+          <input id="in-rate" type="number" step="any" min="0" value="6" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-duration">Plazo</label>
+          <div style="display:flex;gap:0.5rem;">
+            <input id="in-duration" type="number" step="1" min="1" value="3" class="form-control" />
+            <select id="in-unit" class="form-control" style="max-width:7.5rem;">
+              <option value="years">Años</option>
+              <option value="months">Meses</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="in-fee">Comisión de apertura (opcional)</label>
+          <input id="in-fee" type="number" step="any" min="0" value="100" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Cuota mensual (EMI)</span><span id="out-emi" class="result-value">304,22 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Importe original</span><span id="out-principal" class="result-value">10.000,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Total intereses</span><span id="out-interest" class="result-value">951,90 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Devolución total</span><span id="out-repay" class="result-value">10.951,90 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Comisión apertura</span><span id="out-fee" class="result-value">100,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Coste total estimado con comisión</span><span id="out-totalcost" class="result-value">11.051,90 EUR (€)</span></div>
+        </div>
+        <div class="notice-box">
+          Aviso: Este cálculo emplea el método de saldo decreciente y NO constituye una cotización bancaria oficial. Los pagos reales pueden variar por comisiones bancarias, seguros, impuestos y condiciones específicas de cada entidad.
+        </div>
+        <details style="margin-top:1rem;">
+          <summary style="cursor:pointer;font-weight:600;font-size:0.9rem;color:var(--accent);">
+            Ver tabla de amortización mensual completa
+          </summary>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Mes</th>
+                  <th>Saldo inicial</th>
+                  <th>Cuota mensual</th>
+                  <th>Capital pagado</th>
+                  <th>Intereses</th>
+                  <th>Saldo pendiente</th>
+                </tr>
+              </thead>
+              <tbody id="out-schedule-body"></tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calcular ahora</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copiar resultados</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copiado al portapapeles (Copied to clipboard)</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>Cómo calcular la cuota de tu préstamo</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Selecciona la moneda de visualización.</li><li style="margin-bottom:0.5rem;">Introduce el importe principal del préstamo que deseas solicitar.</li><li style="margin-bottom:0.5rem;">Indica el tipo de interés anual nominal (%) — admite 0% para préstamos sin intereses.</li><li style="margin-bottom:0.5rem;">Introduce el plazo de devolución y elige si está expresado en meses o en años.</li><li style="margin-bottom:0.5rem;">Opcionalmente, añade el importe de la comisión de apertura o estudio para conocer el coste total estimado.</li><li style="margin-bottom:0.5rem;">Despliega la tabla de amortización mensual para ver cómo evoluciona el capital y los intereses en cada cuota.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Ejemplo práctico</h3>
+            <p>Para un préstamo de 10.000,00 EUR al 6% de interés anual durante 3 años (36 meses) y una comisión de apertura de 100,00 EUR: la cuota mensual (EMI) es de 304,22 EUR, el total de intereses es de 951,90 EUR, la devolución total es de 10.951,90 EUR y el coste total estimado con comisión es de 11.051,90 EUR.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Fórmula de cuota fija sobre saldo decreciente (EMI)</h2>
+            <div class="formula-box">
+              <div>EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)</div><div>Si el tipo de interés es 0%: EMI = P / n</div><div>Donde: P = Capital principal | r = Interés mensual (Anual / 12 / 100) | n = Número total de meses</div>
+            </div>
+            <p>A diferencia del interés plano, en el sistema de saldo decreciente los intereses de cada mes se calculan únicamente sobre el capital pendiente de devolución. Al principio del préstamo pagas más intereses y menos capital; hacia el final, la mayor parte de la cuota amortiza capital.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Espacio publicitario opcional (Contenedor reservado)">
+        <strong>Espacio publicitario opcional (Contenedor reservado)</strong>
+        <div>Contenedor estático preparado para futura integración publicitaria, separado de los controles de la calculadora.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Preguntas frecuentes de esta herramienta</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>¿Qué diferencia hay entre el interés sobre saldo decreciente y el interés plano?</h3><p>En el interés sobre saldo decreciente (el estándar bancario habitual), cada mes pagas intereses solo sobre la deuda que aún te queda por devolver. En el interés plano se cobran intereses sobre el importe inicial durante toda la vida del préstamo, lo que resulta mucho más costoso.</p></div></div>
+          <div class="card"><div><h3>¿Por qué la cuota real de mi banco puede variar respecto a este cálculo?</h3><p>Esta calculadora proporciona una estimación matemática independiente y NO constituye una oferta ni cotización oficial bancaria. Los pagos reales pueden variar debido a comisiones bancarias adicionales, seguros vinculados, impuestos locales, redondeos de días exactos o revisiones de tipos variables.</p></div></div>
+          <div class="card"><div><h3>¿Funciona para préstamos al 0% de interés?</h3><p>Sí. Si introduces un 0% de interés anual, la calculadora aplica automáticamente la fórmula lineal (Capital / Número de meses) sin errores de división.</p></div></div>
+          <div class="card"><div><h3>¿Qué muestra la tabla de amortización mensual?</h3><p>Muestra mes por mes el saldo inicial, la cuota pagada, qué parte corresponde a intereses, qué parte reduce tu deuda (capital amortizado) y el saldo pendiente tras cada pago hasta llegar a cero.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Herramientas relacionadas</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></h3>
+                  <p>Convierte tu sueldo entre salario anual, mensual, quincenal, semanal, diario y por hora con ingresos extra y deducciones manuales.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-salario.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></h3>
+                  <p>Divide el coste total de un proyecto, servicio o empleado entre las horas trabajadas para conocer el coste horario y diario.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-coste-por-hora.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></h3>
+                  <p>Averigua cuánto dinero ahorras y cuál es el precio final tras aplicar cualquier porcentaje de descuento.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-descuentos.html">Abrir calculadora &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calcula fácil. Herramientas gratis para tu día a día.</p>
+          <p>CalculaFácil ofrece calculadoras cotidianas de negocios, finanzas personales y utilidades de texto en español e inglés. Rápido, transparente y sin registro.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Todas las herramientas se ejecutan localmente en tu navegador. No requiere registro ni suscripción.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Las 10 Herramientas</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></li>
+            <li><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></li>
+            <li><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></li>
+            <li><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></li>
+            <li><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></li>
+            <li><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></li>
+            <li><a href="/es/herramientas/contador-de-palabras.html">Contador de palabras</a></li>
+            <li><a href="/es/herramientas/contador-de-caracteres.html">Contador de caracteres</a></li>
+            <li><a href="/es/herramientas/calculadora-prestamos.html">Calculadora de préstamos bancarios</a></li>
+            <li><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Información y Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/es/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="/es/contacto.html">Contacto</a></li>
+            <li><a href="/es/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="/es/terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="/es/aviso-legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. Todos los derechos reservados.</span>
+        <span>Contacto: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

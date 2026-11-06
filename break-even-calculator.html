@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Break-Even Calculator (Units &amp; Revenue) — CalculaFácil</title>
+  <meta name="description" content="Calculate your break-even point in units and total revenue using fixed costs, variable cost per unit, and selling price per unit." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-punto-equilibrio.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Break-Even Calculator (Units &amp; Revenue) — CalculaFácil" />
+  <meta property="og:description" content="Calculate your break-even point in units and total revenue using fixed costs, variable cost per unit, and selling price per unit." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/break-even-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Break-Even Calculator (Units &amp; Revenue) — CalculaFácil" />
+  <meta name="twitter:description" content="Calculate your break-even point in units and total revenue using fixed costs, variable cost per unit, and selling price per unit." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Break-Even Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/break-even-calculator.html","inLanguage":"en","description":"Calculate your break-even point in units and total revenue using fixed costs, variable cost per unit, and selling price per unit.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the calculator round break-even units up to the next whole number?","acceptedAnswer":{"@type":"Answer","text":"If the exact mathematical break-even point is 84.2 units, selling 84 units still leaves a small loss. Selling the 85th whole unit is required to fully cover fixed costs."}},{"@type":"Question","name":"Why do I get an error when selling price is less than or equal to variable cost?","acceptedAnswer":{"@type":"Answer","text":"When selling price does not exceed variable cost, every unit sold loses money or contributes zero toward fixed costs, making break-even mathematically unreachable."}},{"@type":"Question","name":"What counts as a fixed cost versus a variable cost?","acceptedAnswer":{"@type":"Answer","text":"Fixed costs remain constant regardless of sales volume (rent, base salaries, insurance). Variable costs scale directly with each unit sold (raw materials, unit shipping, payment gateway fees)."}},{"@type":"Question","name":"Can I use this for monthly or annual planning?","acceptedAnswer":{"@type":"Answer","text":"Yes—simply enter monthly fixed costs to find your monthly break-even volume, or annual fixed costs to find your annual break-even volume."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-punto-equilibrio.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/break-even-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-punto-equilibrio.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/break-even-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Break-Even Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Business &amp; Sales</div>
+        <h1>Break-Even Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Your break-even point is the exact sales volume where total revenue equals total costs—meaning zero net loss and zero net profit. Use this calculator to determine how many whole units you must sell to cover both fixed overhead and unit variable costs.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="break-even" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-3">
+        <div class="form-group">
+          <label for="in-fixed">Fixed costs</label>
+          <input id="in-fixed" type="number" step="any" min="0" value="3000" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-variable">Variable cost per unit</label>
+          <input id="in-variable" type="number" step="any" min="0" value="15" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-selling">Selling price per unit</label>
+          <input id="in-selling" type="number" step="any" min="0" value="40" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Break-even units</span><span id="out-units" class="result-value">120</span></div>
+          <div class="result-box"><span class="result-label">Break-even revenue</span><span id="out-revenue" class="result-value">4.800,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Contribution margin per unit</span><span id="out-cm" class="result-value">25,00 EUR (€)</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to calculate your break-even point</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Enter your total fixed costs for the period (rent, salaried payroll, insurance, software subscriptions).</li><li style="margin-bottom:0.5rem;">Enter your variable cost per unit (materials, packaging, per-unit fulfillment).</li><li style="margin-bottom:0.5rem;">Enter your selling price per unit (must be strictly higher than variable cost per unit).</li><li style="margin-bottom:0.5rem;">See the break-even units (rounded up to the next whole unit), break-even revenue, and contribution margin per unit.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>With 3,000.00 USD in monthly fixed costs, a variable cost of 15.00 USD per unit, and a selling price of 40.00 USD per unit: your contribution margin is 25.00 USD per unit. You must sell 120 units (3,000 / 25), generating 4,800.00 USD in break-even revenue.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Break-even formulas</h2>
+            <div class="formula-box">
+              <div>Contribution Margin per Unit = Selling Price − Variable Cost</div><div>Break-Even Units = Fixed Costs / (Selling Price − Variable Cost)</div><div>Break-Even Revenue = Break-Even Units (rounded up) × Selling Price</div>
+            </div>
+            <p>Each unit sold contributes the difference between its selling price and variable cost toward paying off fixed overhead. Because partial units cannot normally be sold, the unit count is rounded up to the next whole integer.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>Why does the calculator round break-even units up to the next whole number?</h3><p>If the exact mathematical break-even point is 84.2 units, selling 84 units still leaves a small loss. Selling the 85th whole unit is required to fully cover fixed costs.</p></div></div>
+          <div class="card"><div><h3>Why do I get an error when selling price is less than or equal to variable cost?</h3><p>When selling price does not exceed variable cost, every unit sold loses money or contributes zero toward fixed costs, making break-even mathematically unreachable.</p></div></div>
+          <div class="card"><div><h3>What counts as a fixed cost versus a variable cost?</h3><p>Fixed costs remain constant regardless of sales volume (rent, base salaries, insurance). Variable costs scale directly with each unit sold (raw materials, unit shipping, payment gateway fees).</p></div></div>
+          <div class="card"><div><h3>Can I use this for monthly or annual planning?</h3><p>Yes—simply enter monthly fixed costs to find your monthly break-even volume, or annual fixed costs to find your annual break-even volume.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></h3>
+                  <p>Calculate gross profit amount, profit margin percentage on sales, and markup percentage on cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/profit-margin-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></h3>
+                  <p>Find the exact selling price needed to achieve your target gross profit margin percentage.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/selling-price-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></h3>
+                  <p>Divide total project, operational, or labor cost by total hours to calculate exact hourly and daily cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/hourly-cost-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

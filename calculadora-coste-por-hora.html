@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Calculadora de Coste por Hora y Jornada — CalculaFácil</title>
+  <meta name="description" content="Calcula fácilmente el coste por hora y el coste por día a partir del coste total y las horas empleadas. Ideal para autónomos, proyectos y empresas." />
+  <link rel="canonical" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/hourly-cost-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Calculadora de Coste por Hora y Jornada — CalculaFácil" />
+  <meta property="og:description" content="Calcula fácilmente el coste por hora y el coste por día a partir del coste total y las horas empleadas. Ideal para autónomos, proyectos y empresas." />
+  <meta property="og:url" content="https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Coste por Hora y Jornada — CalculaFácil" />
+  <meta name="twitter:description" content="Calcula fácilmente el coste por hora y el coste por día a partir del coste total y las horas empleadas. Ideal para autónomos, proyectos y empresas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Calculadora de coste por hora","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/es/herramientas/calculadora-coste-por-hora.html","inLanguage":"es","description":"Calcula fácilmente el coste por hora y el coste por día a partir del coste total y las horas empleadas. Ideal para autónomos, proyectos y empresas.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Para qué sirve conocer el coste por hora en un negocio?","acceptedAnswer":{"@type":"Answer","text":"Permite fijar tarifas mínimas rentables para clientes, evaluar si un proyecto fue eficiente y comparar el coste real de distintos equipos o proveedores."}},{"@type":"Question","name":"¿Puedo introducir fracciones de hora (decimales)?","acceptedAnswer":{"@type":"Answer","text":"Sí. Por ejemplo, para 7 horas y 30 minutos puedes escribir 7,5 horas."}},{"@type":"Question","name":"¿Cuál es la diferencia entre horas totales y horas facturables?","acceptedAnswer":{"@type":"Answer","text":"Si eres autónomo o agencia, te recomendamos dividir tus costes totales mensuales entre las horas realmente facturables a clientes, ya que las horas administrativas también deben cubrirse."}},{"@type":"Question","name":"¿Cómo paso del coste por hora al precio de venta por hora?","acceptedAnswer":{"@type":"Answer","text":"Una vez que conozcas tu coste por hora aquí, puedes llevar ese valor a nuestra Calculadora de precio de venta para añadir el margen de beneficio que deseas obtener."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/es/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/herramientas/index.html">Herramientas</a>
+        <a href="/es/index.html#categories">Categorías</a>
+        <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-coste-por-hora.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/hourly-cost-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Idioma</span>
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-coste-por-hora.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/hourly-cost-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Menú móvil">
+      <a href="/es/index.html">Inicio</a>
+      <a href="/es/herramientas/index.html">Herramientas</a>
+      <a href="/es/index.html#categories">Categorías</a>
+      <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/es/index.html">Inicio</a> /
+        <a href="/es/herramientas/index.html">Herramientas</a> /
+        <span>Calculadora de coste por hora</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Negocios y Ventas</div>
+        <h1>Calculadora de coste por hora</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Determina cuánto cuesta realmente cada hora de trabajo, operación o proyecto. Introduce el gasto o presupuesto total y el número de horas invertidas para conocer el coste por hora, el coste por jornada diaria y el coste por minuto.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="hourly-cost" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Moneda de visualización</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Nota: La selección de moneda cambia únicamente el símbolo y formato de visualización. No aplica tipos de cambio.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">Dólar estadounidense (USD $)</option><option value="MXN">Peso mexicano (MXN $)</option><option value="ARS">Peso argentino (ARS $)</option><option value="COP">Peso colombiano (COP $)</option><option value="CLP">Peso chileno (CLP $)</option><option value="GBP">Libra esterlina (GBP £)</option><option value="PKR">Rupia pakistaní (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-3">
+        <div class="form-group">
+          <label for="in-cost">Coste total</label>
+          <input id="in-cost" type="number" step="any" min="0" value="2400" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-hours">Horas totales</label>
+          <input id="in-hours" type="number" step="any" min="0.1" value="160" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-dayhours">Horas por día</label>
+          <input id="in-dayhours" type="number" step="any" min="0.5" max="24" value="8" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Coste por hora</span><span id="out-hourly" class="result-value">15,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Coste por día</span><span id="out-daily" class="result-value">120,00 EUR (€)</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calcular ahora</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copiar resultados</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copiado al portapapeles (Copied to clipboard)</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>Cómo calcular el coste por hora</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Elige la moneda de visualización.</li><li style="margin-bottom:0.5rem;">Introduce el coste total del proyecto, servicio o período.</li><li style="margin-bottom:0.5rem;">Introduce el número total de horas dedicadas.</li><li style="margin-bottom:0.5rem;">Opcionalmente, ajusta las horas por jornada diaria (por defecto 8 horas) para ver el coste por día.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Ejemplo práctico</h3>
+            <p>Si un proyecto supone un coste total de 2.400,00 EUR y requiere 160 horas de trabajo (con jornadas de 8 horas): el coste por hora es de 15,00 EUR y el coste por jornada diaria es de 120,00 EUR.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Fórmula del coste por hora</h2>
+            <div class="formula-box">
+              <div>Coste por Hora = Coste Total / Horas Totales</div><div>Coste por Día = Coste por Hora × Horas por Día</div>
+            </div>
+            <p>Dividir todos los gastos directos e indirectos entre las horas efectivas te permite presupuestar futuros trabajos sin subestimar tus costes operativos.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Espacio publicitario opcional (Contenedor reservado)">
+        <strong>Espacio publicitario opcional (Contenedor reservado)</strong>
+        <div>Contenedor estático preparado para futura integración publicitaria, separado de los controles de la calculadora.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Preguntas frecuentes de esta herramienta</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>¿Para qué sirve conocer el coste por hora en un negocio?</h3><p>Permite fijar tarifas mínimas rentables para clientes, evaluar si un proyecto fue eficiente y comparar el coste real de distintos equipos o proveedores.</p></div></div>
+          <div class="card"><div><h3>¿Puedo introducir fracciones de hora (decimales)?</h3><p>Sí. Por ejemplo, para 7 horas y 30 minutos puedes escribir 7,5 horas.</p></div></div>
+          <div class="card"><div><h3>¿Cuál es la diferencia entre horas totales y horas facturables?</h3><p>Si eres autónomo o agencia, te recomendamos dividir tus costes totales mensuales entre las horas realmente facturables a clientes, ya que las horas administrativas también deben cubrirse.</p></div></div>
+          <div class="card"><div><h3>¿Cómo paso del coste por hora al precio de venta por hora?</h3><p>Una vez que conozcas tu coste por hora aquí, puedes llevar ese valor a nuestra Calculadora de precio de venta para añadir el margen de beneficio que deseas obtener.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Herramientas relacionadas</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></h3>
+                  <p>Convierte tu sueldo entre salario anual, mensual, quincenal, semanal, diario y por hora con ingresos extra y deducciones manuales.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-salario.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></h3>
+                  <p>Calcula el beneficio neto por unidad, el porcentaje de margen sobre las ventas y el recargo (markup) sobre el coste.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-margen-beneficio.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></h3>
+                  <p>Calcula cuántas unidades necesitas vender y qué facturación alcanzar para cubrir todos los costes fijos y variables.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-punto-equilibrio.html">Abrir calculadora &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calcula fácil. Herramientas gratis para tu día a día.</p>
+          <p>CalculaFácil ofrece calculadoras cotidianas de negocios, finanzas personales y utilidades de texto en español e inglés. Rápido, transparente y sin registro.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Todas las herramientas se ejecutan localmente en tu navegador. No requiere registro ni suscripción.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Las 10 Herramientas</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></li>
+            <li><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></li>
+            <li><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></li>
+            <li><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></li>
+            <li><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></li>
+            <li><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></li>
+            <li><a href="/es/herramientas/contador-de-palabras.html">Contador de palabras</a></li>
+            <li><a href="/es/herramientas/contador-de-caracteres.html">Contador de caracteres</a></li>
+            <li><a href="/es/herramientas/calculadora-prestamos.html">Calculadora de préstamos bancarios</a></li>
+            <li><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Información y Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/es/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="/es/contacto.html">Contacto</a></li>
+            <li><a href="/es/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="/es/terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="/es/aviso-legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. Todos los derechos reservados.</span>
+        <span>Contacto: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

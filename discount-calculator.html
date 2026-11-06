@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Discount Calculator (Sale Price &amp; Savings) — CalculaFácil</title>
+  <meta name="description" content="Free discount calculator. Enter the original price and discount percentage to instantly see how much you save and the final price to pay." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Discount Calculator (Sale Price &amp; Savings) — CalculaFácil" />
+  <meta property="og:description" content="Free discount calculator. Enter the original price and discount percentage to instantly see how much you save and the final price to pay." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Discount Calculator (Sale Price &amp; Savings) — CalculaFácil" />
+  <meta name="twitter:description" content="Free discount calculator. Enter the original price and discount percentage to instantly see how much you save and the final price to pay." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Discount Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/discount-calculator.html","inLanguage":"en","description":"Free discount calculator. Enter the original price and discount percentage to instantly see how much you save and the final price to pay.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does offering a discount affect my business profit margin?","acceptedAnswer":{"@type":"Answer","text":"A discount lowers your effective selling price while your product cost stays fixed. Take the Final Price calculated here and test it in our Profit Margin Calculator to ensure the sale remains profitable."}},{"@type":"Question","name":"Can I enter decimal discount percentages?","acceptedAnswer":{"@type":"Answer","text":"Yes, any value from 0% to 100% including decimals like 7.5% or 15.25% is supported."}},{"@type":"Question","name":"Are two consecutive 10% discounts equal to a 20% discount?","acceptedAnswer":{"@type":"Answer","text":"No. Taking 10% off 100 USD gives 90 USD, and taking another 10% off 90 USD subtracts 9 USD, leaving 81 USD—an effective total discount of 19%, not 20%."}},{"@type":"Question","name":"Does currency selection change the numerical math?","acceptedAnswer":{"@type":"Answer","text":"No, selecting a currency only formats how the amounts are displayed and never performs foreign exchange conversion."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-descuentos.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/discount-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/calculadora-descuentos.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/discount-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Discount Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Finance &amp; Personal Money</div>
+        <h1>Discount Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Find out exactly how much money you save and what you will pay after a percentage discount. Ideal for everyday shopping, promotional pricing, and client quotes.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="discount" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-2">
+        <div class="form-group">
+          <label for="in-price">Original price</label>
+          <input id="in-price" type="number" step="any" min="0" value="120" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-rate">Discount percentage (%)</label>
+          <input id="in-rate" type="number" step="any" min="0" max="100" value="25" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Final price</span><span id="out-final" class="result-value">90,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Discount amount</span><span id="out-discount" class="result-value">30,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Percentage saved</span><span id="out-saved" class="result-value">25,00%</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to calculate a discount</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Choose your display currency.</li><li style="margin-bottom:0.5rem;">Enter the original price before discount.</li><li style="margin-bottom:0.5rem;">Enter the discount percentage (between 0% and 100%).</li><li style="margin-bottom:0.5rem;">See the discount amount saved, the final price, and the percentage saved right away.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>If an item originally costs 120.00 USD with a 25% discount: you save 30.00 USD (120 × 25 / 100) and pay a final price of 90.00 USD.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Discount formula</h2>
+            <div class="formula-box">
+              <div>Discount Amount = Original Price × Discount Rate / 100</div><div>Final Price = Original Price − Discount Amount</div>
+            </div>
+            <p>The discount amount is found by multiplying the original price by the discount percentage divided by 100, and then subtracting that savings from the original price.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>How does offering a discount affect my business profit margin?</h3><p>A discount lowers your effective selling price while your product cost stays fixed. Take the Final Price calculated here and test it in our Profit Margin Calculator to ensure the sale remains profitable.</p></div></div>
+          <div class="card"><div><h3>Can I enter decimal discount percentages?</h3><p>Yes, any value from 0% to 100% including decimals like 7.5% or 15.25% is supported.</p></div></div>
+          <div class="card"><div><h3>Are two consecutive 10% discounts equal to a 20% discount?</h3><p>No. Taking 10% off 100 USD gives 90 USD, and taking another 10% off 90 USD subtracts 9 USD, leaving 81 USD—an effective total discount of 19%, not 20%.</p></div></div>
+          <div class="card"><div><h3>Does currency selection change the numerical math?</h3><p>No, selecting a currency only formats how the amounts are displayed and never performs foreign exchange conversion.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></h3>
+                  <p>Find the exact selling price needed to achieve your target gross profit margin percentage.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/selling-price-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></h3>
+                  <p>Calculate gross profit amount, profit margin percentage on sales, and markup percentage on cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/profit-margin-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/commission-calculator.html">Commission Calculator</a></h3>
+                  <p>Calculate sales commission amount, total including commission, and net proceeds after deducting commission.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/commission-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

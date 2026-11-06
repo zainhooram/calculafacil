@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Calculadora de Descuentos y Precio Final — CalculaFácil</title>
+  <meta name="description" content="Calcula gratis el precio final de un producto y el ahorro exacto al aplicar un porcentaje de descuento. Rápida, clara y sin registros." />
+  <link rel="canonical" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/discount-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Calculadora de Descuentos y Precio Final — CalculaFácil" />
+  <meta property="og:description" content="Calcula gratis el precio final de un producto y el ahorro exacto al aplicar un porcentaje de descuento. Rápida, clara y sin registros." />
+  <meta property="og:url" content="https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Descuentos y Precio Final — CalculaFácil" />
+  <meta name="twitter:description" content="Calcula gratis el precio final de un producto y el ahorro exacto al aplicar un porcentaje de descuento. Rápida, clara y sin registros." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Calculadora de descuentos","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/es/herramientas/calculadora-descuentos.html","inLanguage":"es","description":"Calcula gratis el precio final de un producto y el ahorro exacto al aplicar un porcentaje de descuento. Rápida, clara y sin registros.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se calcula mentalmente un descuento rápido?","acceptedAnswer":{"@type":"Answer","text":"Un truco sencillo es calcular primero el 10% (moviendo la coma decimal un lugar a la izquierda) y multiplicar a partir de ahí. Por ejemplo, el 10% de 80 es 8, así que el 20% es 16 y el 5% es 4."}},{"@type":"Question","name":"¿Puedo introducir un porcentaje de descuento con decimales?","acceptedAnswer":{"@type":"Answer","text":"Sí, admite cualquier valor entre 0% y 100%, incluyendo decimales como 12,5% o 17,25%."}},{"@type":"Question","name":"¿Cómo afecta un descuento al margen de beneficio de mi tienda?","acceptedAnswer":{"@type":"Answer","text":"Un descuento reduce directamente tu precio de venta mientras el coste del producto se mantiene igual. Puedes introducir el Precio Final obtenido aquí dentro de la Calculadora de margen de beneficio para verificar si sigues teniendo ganancias."}},{"@type":"Question","name":"¿Es lo mismo dos descuentos sucesivos del 10% que un descuento del 20%?","acceptedAnswer":{"@type":"Answer","text":"No. Si aplicas un 10% a 100 EUR pasas a 90 EUR; un segundo 10% sobre 90 EUR descuenta 9 EUR adicionales, dejando el precio en 81 EUR (lo que equivale a un descuento total del 19%, no del 20%)."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/es/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/herramientas/index.html">Herramientas</a>
+        <a href="/es/index.html#categories">Categorías</a>
+        <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-descuentos.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/discount-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menú
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Idioma</span>
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <a href="/es/herramientas/calculadora-descuentos.html" data-set-lang="es" class="lang-link active">ES · Español</a>
+          <a href="/en/tools/discount-calculator.html" data-set-lang="en" class="lang-link ">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Menú móvil">
+      <a href="/es/index.html">Inicio</a>
+      <a href="/es/herramientas/index.html">Herramientas</a>
+      <a href="/es/index.html#categories">Categorías</a>
+      <a href="/es/sobre-nosotros.html">Sobre nosotros</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/es/index.html">Inicio</a> /
+        <a href="/es/herramientas/index.html">Herramientas</a> /
+        <span>Calculadora de descuentos</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Finanzas y Ahorro</div>
+        <h1>Calculadora de descuentos</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Comprueba al instante cuánto vas a pagar en rebajas, promociones comerciales o presupuestos con descuento. Solo tienes que indicar el precio original y el porcentaje de rebaja para conocer el ahorro exacto y el importe final.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="discount" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Moneda de visualización</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Nota: La selección de moneda cambia únicamente el símbolo y formato de visualización. No aplica tipos de cambio.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">Dólar estadounidense (USD $)</option><option value="MXN">Peso mexicano (MXN $)</option><option value="ARS">Peso argentino (ARS $)</option><option value="COP">Peso colombiano (COP $)</option><option value="CLP">Peso chileno (CLP $)</option><option value="GBP">Libra esterlina (GBP £)</option><option value="PKR">Rupia pakistaní (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-2">
+        <div class="form-group">
+          <label for="in-price">Precio original</label>
+          <input id="in-price" type="number" step="any" min="0" value="120" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-rate">Porcentaje de descuento (%)</label>
+          <input id="in-rate" type="number" step="any" min="0" max="100" value="25" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Precio final</span><span id="out-final" class="result-value">90,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Importe descontado</span><span id="out-discount" class="result-value">30,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Porcentaje ahorrado</span><span id="out-saved" class="result-value">25,00%</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calcular ahora</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copiar resultados</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copiado al portapapeles (Copied to clipboard)</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>Cómo calcular un descuento</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Selecciona tu moneda de visualización.</li><li style="margin-bottom:0.5rem;">Introduce el precio original del artículo o servicio antes del descuento.</li><li style="margin-bottom:0.5rem;">Introduce el porcentaje de descuento (entre 0% y 100%).</li><li style="margin-bottom:0.5rem;">Obtén de inmediato el dinero ahorrado, el precio final a pagar y el porcentaje ahorrado.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Ejemplo práctico</h3>
+            <p>Un abrigo cuesta originalmente 120,00 EUR y tiene un 25% de descuento: el ahorro es de 30,00 EUR (120 × 25 / 100) y el precio final a pagar es de 90,00 EUR.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Fórmula del descuento</h2>
+            <div class="formula-box">
+              <div>Importe del Descuento = Precio Original × Porcentaje de Descuento / 100</div><div>Precio Final = Precio Original − Importe del Descuento</div>
+            </div>
+            <p>Multiplicamos el precio inicial por el porcentaje dividido entre 100 para obtener la rebaja monetaria y luego la restamos del precio original.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Espacio publicitario opcional (Contenedor reservado)">
+        <strong>Espacio publicitario opcional (Contenedor reservado)</strong>
+        <div>Contenedor estático preparado para futura integración publicitaria, separado de los controles de la calculadora.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Preguntas frecuentes de esta herramienta</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>¿Cómo se calcula mentalmente un descuento rápido?</h3><p>Un truco sencillo es calcular primero el 10% (moviendo la coma decimal un lugar a la izquierda) y multiplicar a partir de ahí. Por ejemplo, el 10% de 80 es 8, así que el 20% es 16 y el 5% es 4.</p></div></div>
+          <div class="card"><div><h3>¿Puedo introducir un porcentaje de descuento con decimales?</h3><p>Sí, admite cualquier valor entre 0% y 100%, incluyendo decimales como 12,5% o 17,25%.</p></div></div>
+          <div class="card"><div><h3>¿Cómo afecta un descuento al margen de beneficio de mi tienda?</h3><p>Un descuento reduce directamente tu precio de venta mientras el coste del producto se mantiene igual. Puedes introducir el Precio Final obtenido aquí dentro de la Calculadora de margen de beneficio para verificar si sigues teniendo ganancias.</p></div></div>
+          <div class="card"><div><h3>¿Es lo mismo dos descuentos sucesivos del 10% que un descuento del 20%?</h3><p>No. Si aplicas un 10% a 100 EUR pasas a 90 EUR; un segundo 10% sobre 90 EUR descuenta 9 EUR adicionales, dejando el precio en 81 EUR (lo que equivale a un descuento total del 19%, no del 20%).</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Herramientas relacionadas</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></h3>
+                  <p>Determina el precio de venta exacto que debes fijar para alcanzar tu margen de beneficio objetivo.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-precio-venta.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></h3>
+                  <p>Calcula el beneficio neto por unidad, el porcentaje de margen sobre las ventas y el recargo (markup) sobre el coste.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-margen-beneficio.html">Abrir calculadora &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></h3>
+                  <p>Calcula el importe exacto de una comisión comercial, el neto tras descontarla y el total sumando la comisión.</p>
+                </div>
+                <div class="card-footer"><a href="/es/herramientas/calculadora-comisiones.html">Abrir calculadora &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calcula fácil. Herramientas gratis para tu día a día.</p>
+          <p>CalculaFácil ofrece calculadoras cotidianas de negocios, finanzas personales y utilidades de texto en español e inglés. Rápido, transparente y sin registro.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Todas las herramientas se ejecutan localmente en tu navegador. No requiere registro ni suscripción.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Las 10 Herramientas</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/es/herramientas/calculadora-margen-beneficio.html">Calculadora de margen de beneficio</a></li>
+            <li><a href="/es/herramientas/calculadora-precio-venta.html">Calculadora de precio de venta</a></li>
+            <li><a href="/es/herramientas/calculadora-punto-equilibrio.html">Calculadora de punto de equilibrio</a></li>
+            <li><a href="/es/herramientas/calculadora-coste-por-hora.html">Calculadora de coste por hora</a></li>
+            <li><a href="/es/herramientas/calculadora-comisiones.html">Calculadora de comisiones</a></li>
+            <li><a href="/es/herramientas/calculadora-descuentos.html">Calculadora de descuentos</a></li>
+            <li><a href="/es/herramientas/contador-de-palabras.html">Contador de palabras</a></li>
+            <li><a href="/es/herramientas/contador-de-caracteres.html">Contador de caracteres</a></li>
+            <li><a href="/es/herramientas/calculadora-prestamos.html">Calculadora de préstamos bancarios</a></li>
+            <li><a href="/es/herramientas/calculadora-salario.html">Calculadora de salario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Información y Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/es/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="/es/contacto.html">Contacto</a></li>
+            <li><a href="/es/politica-privacidad.html">Política de privacidad</a></li>
+            <li><a href="/es/terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="/es/aviso-legal.html">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. Todos los derechos reservados.</span>
+        <span>Contacto: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

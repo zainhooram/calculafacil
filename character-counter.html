@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Live Character Counter with Custom Limit — CalculaFácil</title>
+  <meta name="description" content="Free online character counter. Track characters with and without spaces, word count, and remaining characters with a customizable limit alert." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/character-counter.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/character-counter.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/contador-de-caracteres.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Live Character Counter with Custom Limit — CalculaFácil" />
+  <meta property="og:description" content="Free online character counter. Track characters with and without spaces, word count, and remaining characters with a customizable limit alert." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/character-counter.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Live Character Counter with Custom Limit — CalculaFácil" />
+  <meta name="twitter:description" content="Free online character counter. Track characters with and without spaces, word count, and remaining characters with a customizable limit alert." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Character Counter","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/character-counter.html","inLanguage":"en","description":"Free online character counter. Track characters with and without spaces, word count, and remaining characters with a customizable limit alert.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do spaces count as characters?","acceptedAnswer":{"@type":"Answer","text":"Yes, in almost all digital platforms, form inputs, and SMS systems, every space and punctuation mark counts as one character. We show both total characters and characters excluding spaces."}},{"@type":"Question","name":"What are standard character limits for SEO and social media?","acceptedAnswer":{"@type":"Answer","text":"SEO page titles typically fit best within 50–60 characters, meta descriptions within 120–155 characters, standard SMS messages within 160 characters, and standard X posts within 280 characters."}},{"@type":"Question","name":"Does the tool truncate my text if I go over the limit?","acceptedAnswer":{"@type":"Answer","text":"No, your text is never cut off. Instead, the counter highlights the limit status and shows a negative remaining count so you can edit comfortably."}},{"@type":"Question","name":"Is my text stored anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs locally in your browser with zero server communication."}}]}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/contador-de-caracteres.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/character-counter.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+          Menu
+        </button>
+      </div>
+      <div class="mobile-lang-row">
+        <span class="mobile-lang-label">Language</span>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <a href="/es/herramientas/contador-de-caracteres.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+          <a href="/en/tools/character-counter.html" data-set-lang="en" class="lang-link active">EN · English</a>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/tools/index.html">All Tools</a>
+      <a href="/en/index.html#categories">Categories</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Character Counter</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Text &amp; Writing Tools</div>
+        <h1>Character Counter</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Write concise SEO titles, meta descriptions, SMS messages, and social media posts without guessing lengths. Set any custom character limit—or pick a quick preset—and see your remaining characters and visual status update as you type.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="character-counter" class="calc-panel">
+      <div class="form-group" style="max-width:16rem;margin-bottom:1rem;">
+        <label for="in-limit">Character limit</label>
+        <input id="in-limit" type="number" min="1" value="155" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="in-text">Your text</label>
+        <textarea id="in-text" rows="5" class="form-control">Calculate easily. Free tools for everyday life.</textarea>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box"><span class="result-label">Total characters</span><span id="out-chars" class="result-value">47</span></div>
+          <div class="result-box"><span class="result-label">Excluding spaces</span><span id="out-nospaces" class="result-value">41</span></div>
+          <div class="result-box"><span class="result-label">Words</span><span id="out-words" class="result-value">7</span></div>
+          <div class="result-box highlight"><span class="result-label">Remaining characters</span><span id="out-remaining" class="result-value">108</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to use the character counter</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Enter your target character limit or select a quick preset (60 SEO Title, 155 Meta Description, 160 SMS, 280 Social Post).</li><li style="margin-bottom:0.5rem;">Type or paste your text into the editor.</li><li style="margin-bottom:0.5rem;">Monitor total characters, characters excluding spaces, word count, and remaining characters.</li><li style="margin-bottom:0.5rem;">If your text exceeds the limit, a clear warning displays how many characters you are over.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>With a 155-character limit set for an SEO meta description and a draft of 135 characters, the tool shows 20 characters remaining (87.1% used).</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Character limit calculation</h2>
+            <div class="formula-box">
+              <div>Remaining Characters = Target Limit − Total Characters (including spaces)</div><div>Limit Usage (%) = (Total Characters / Target Limit) × 100</div>
+            </div>
+            <p>Search snippets, social platforms, and form fields count spaces and punctuation toward maximum length limits. We also display characters excluding spaces for academic or translation workflows.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>Do spaces count as characters?</h3><p>Yes, in almost all digital platforms, form inputs, and SMS systems, every space and punctuation mark counts as one character. We show both total characters and characters excluding spaces.</p></div></div>
+          <div class="card"><div><h3>What are standard character limits for SEO and social media?</h3><p>SEO page titles typically fit best within 50–60 characters, meta descriptions within 120–155 characters, standard SMS messages within 160 characters, and standard X posts within 280 characters.</p></div></div>
+          <div class="card"><div><h3>Does the tool truncate my text if I go over the limit?</h3><p>No, your text is never cut off. Instead, the counter highlights the limit status and shows a negative remaining count so you can edit comfortably.</p></div></div>
+          <div class="card"><div><h3>Is my text stored anywhere?</h3><p>No. Everything runs locally in your browser with zero server communication.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/word-counter.html">Word Counter</a></h3>
+                  <p>Count words, total characters, characters excluding spaces, sentences, and paragraphs live as you type.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/word-counter.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/discount-calculator.html">Discount Calculator</a></h3>
+                  <p>Calculate the exact discount amount, final sale price, and percentage saved on any purchase or quote.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/discount-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/commission-calculator.html">Commission Calculator</a></h3>
+                  <p>Calculate sales commission amount, total including commission, and net proceeds after deducting commission.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/commission-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="brand-logo">CalculaFácil</strong>
+          <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+          <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+          <ul class="footer-links footer-links-2col">
+            <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+            <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+            <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+            <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+            <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+            <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+            <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+            <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+            <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+            <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About Us</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
+            <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CalculaFácil. All rights reserved.</span>
+        <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
