@@ -33,10 +33,10 @@ export type PageType =
  */
 export const SITE_CONFIG = {
   siteName: 'CalculaFácil',
-  // Configurable temporary domain placeholder — replace in one place when domain is purchased
-  domain: 'https://calculafacil.example.com',
+  // Production deployed domain on Cloudflare Pages
+  domain: 'https://calculafacil-6dj.pages.dev',
   // Configurable contact email placeholder — no invented address, phone, or company registration
-  contactEmail: 'contacto@calculafacil.example.com',
+  contactEmail: 'contacto@calculafacil-6dj.pages.dev',
   defaultLanguage: 'es' as Language,
   defaultCurrency: 'EUR' as CurrencyCode,
   storageKeys: {
