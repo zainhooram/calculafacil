@@ -1,0 +1,6 @@
+{
+  "name": "HerramientasFáciles — Calculadoras y Herramientas Online Gratis",
+  "description": "Tus herramientas diarias, fáciles y gratis. Calculadoras financieras, de negocios, préstamos, salario y herramientas de texto en español e inglés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

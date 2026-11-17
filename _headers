@@ -1,0 +1,21 @@
+/css/*
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/es/css/*
+  Content-Type: text/css; charset=utf-8
+
+/en/css/*
+  Content-Type: text/css; charset=utf-8
+
+/assets/*.css
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=3600

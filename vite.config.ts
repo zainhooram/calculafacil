@@ -1,14 +1,55 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
+import {execSync} from 'child_process';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, Plugin} from 'vite';
+
+function calculaFacilStaticPlugin(): Plugin {
+  return {
+    name: 'calculafacil-static-build',
+    apply: 'build',
+    buildStart() {
+      if (process.env.CF_SKIP_PREBUILD === '1') return;
+      execSync('npx tsx scripts/generate-static-site.ts', {
+        stdio: 'inherit',
+        env: {...process.env, CF_SKIP_PREBUILD: '1'},
+      });
+    },
+    closeBundle() {
+      execSync('npx tsx scripts/generate-static-site.ts --post-build', {
+        stdio: 'inherit',
+        env: {...process.env, CF_SKIP_PREBUILD: '1'},
+      });
+    },
+  };
+}
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    base: '/',
+    publicDir: 'public',
+    plugins: [react(), tailwindcss(), calculaFacilStaticPlugin()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
+      },
+    },
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      cssCodeSplit: false,
+      emptyOutDir: true,
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/app.js',
+          chunkFileNames: 'assets/[name].js',
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+              return 'assets/app.css';
+            }
+            return 'assets/[name][extname]';
+          },
+        },
       },
     },
     server: {

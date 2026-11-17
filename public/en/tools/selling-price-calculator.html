@@ -1,0 +1,1754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="application-name" content="CalculaFácil" />
+  <title>Selling Price Calculator from Target Margin — CalculaFácil</title>
+  <meta name="description" content="Calculate the recommended selling price from your product cost and desired profit margin percentage. Includes profit amount and equivalent markup." />
+  <link rel="canonical" href="https://calculafacil.example.com/en/tools/selling-price-calculator.html" />
+  <link rel="alternate" hreflang="es" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+  <link rel="alternate" hreflang="en" href="https://calculafacil.example.com/en/tools/selling-price-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://calculafacil.example.com/es/herramientas/calculadora-precio-venta.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalculaFácil" />
+  <meta property="og:title" content="Selling Price Calculator from Target Margin — CalculaFácil" />
+  <meta property="og:description" content="Calculate the recommended selling price from your product cost and desired profit margin percentage. Includes profit amount and equivalent markup." />
+  <meta property="og:url" content="https://calculafacil.example.com/en/tools/selling-price-calculator.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Selling Price Calculator from Target Margin — CalculaFácil" />
+  <meta name="twitter:description" content="Calculate the recommended selling price from your product cost and desired profit margin percentage. Includes profit amount and equivalent markup." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="/assets/app.css" />
+  <link rel="stylesheet" href="../../assets/app.css" />
+  <style id="cf-inline-styles">/* ==========================================================================
+   CalculaFácil — Complete Production Stylesheet (HTML5 / CSS3)
+   Mobile-first (320px+), WCAG AA Accessible, Tabular Numerals, Zero Clutter
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-muted: #f1f5f9;
+  --bg-accent-soft: #eff6ff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-text: #1e40af;
+  --success: #047857;
+  --warning: #b45309;
+  --danger: #b91c1c;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-canvas);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  main, section, article, header, footer, div {
+    min-width: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    margin-top: 0;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.card-footer a {
+  color: var(--accent);
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tabular-nums, .mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Header & Navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.625rem 0;
+}
+
+@media (min-width: 640px) {
+  .header-inner {
+    flex-wrap: nowrap;
+    height: 4rem;
+    padding: 0;
+    gap: 1rem;
+  }
+}
+
+.brand-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (min-width: 640px) {
+  .brand-logo {
+    font-size: 1.15rem;
+  }
+}
+
+.brand-logo:hover {
+  text-decoration: none;
+}
+
+.main-nav {
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+  }
+}
+
+.main-nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.desktop-lang {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .desktop-lang {
+    display: inline-flex;
+  }
+}
+
+.mobile-lang-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--bg-muted);
+}
+
+@media (min-width: 640px) {
+  .mobile-lang-row {
+    display: none;
+  }
+}
+
+.mobile-lang-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.lang-switcher {
+  display: inline-flex;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.15rem;
+}
+
+.mobile-lang-row .lang-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  max-width: 14rem;
+}
+
+.lang-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.275rem 0.55rem;
+  border-radius: 0.35rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.lang-link:hover {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.lang-link.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.mobile-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2.25rem 0 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 3.25rem 0 3.5rem;
+  }
+}
+
+.hero-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0 auto 0.875rem;
+}
+
+.kicker-item {
+  white-space: nowrap;
+}
+
+.kicker-sep {
+  color: var(--border-strong);
+}
+
+.hero h1 {
+  font-size: clamp(1.65rem, 5.2vw, 3rem);
+  line-height: 1.18;
+  max-width: 42rem;
+  margin: 0 auto 0.875rem;
+  text-wrap: balance;
+}
+
+.heading-clause {
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 38rem;
+  margin: 0 auto 1.5rem;
+  text-wrap: pretty;
+}
+
+@media (min-width: 640px) {
+  .hero-subtitle {
+    font-size: 1.0625rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.search-box {
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  height: 2.875rem;
+  padding: 0 1rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+.search-input:focus {
+  background: var(--bg-surface);
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.hero-tools-nav {
+  max-width: 56rem;
+  margin: 1.5rem auto 0;
+}
+
+.hero-tools-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.hero-tools-tray {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.4rem;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 640px) {
+  .hero-tools-tray {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.hero-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .hero-tool-btn {
+    padding: 0.45rem 0.75rem;
+  }
+}
+
+.hero-tool-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+/* Sections & Cards */
+.section {
+  padding: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+}
+
+.section-header {
+  margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.375rem;
+  margin-bottom: 0.35rem;
+}
+
+@media (min-width: 640px) {
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  min-width: 0;
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.card-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.card h3 a {
+  color: var(--text-primary);
+}
+
+.card h3 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.125rem;
+  overflow-wrap: break-word;
+}
+
+.card-footer {
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--bg-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Filter Tabs */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  height: 2.25rem;
+  padding: 0 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 1.25rem 0 0.875rem;
+  overflow-wrap: break-word;
+}
+
+.breadcrumb a {
+  color: var(--text-secondary);
+}
+
+/* Calculator Box */
+.calc-panel {
+  min-width: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .calc-panel {
+    padding: 2rem;
+  }
+}
+
+.currency-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (min-width: 640px) {
+  .currency-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .form-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.375rem;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 10rem;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.form-control:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.calc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (min-width: 640px) {
+  .calc-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  padding: 0 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .btn {
+    font-size: 0.875rem;
+    padding: 0 1rem;
+  }
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-muted);
+}
+
+.btn-subtle {
+  background: var(--bg-muted);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .btn-subtle {
+    width: auto;
+  }
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 60;
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.copy-toast.visible {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .copy-toast {
+    left: auto;
+    right: 1.5rem;
+    max-width: 22rem;
+  }
+}
+
+.results-area {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.result-box {
+  min-width: 0;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-color);
+}
+
+.result-box.highlight {
+  background: var(--bg-accent-soft);
+  border-color: #bfdbfe;
+}
+
+.result-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.result-value {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .result-value {
+    font-size: 1.35rem;
+  }
+}
+
+.result-box.highlight .result-value {
+  color: var(--accent-hover);
+}
+
+.error-box {
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.formula-box {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  overflow-x: auto;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 0.75rem 0 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.data-table th, .data-table td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: right;
+}
+
+.data-table th:first-child, .data-table td:first-child {
+  text-align: left;
+}
+
+.data-table th {
+  background: var(--bg-muted);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.ad-placeholder {
+  margin: 2.5rem auto;
+  max-width: 52rem;
+  padding: 1.25rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-muted);
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.notice-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: auto;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 2rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 2fr 1fr;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .footer-links-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+
+
+
+:root {
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ==========================================================================
+   1. UNIVERSAL BASE & PREFLIGHT RESET (Placed in @layer base so it never
+      overrides @layer utilities, while resetting links/buttons/inputs)
+   ========================================================================== */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e2e8f0;
+  }
+
+  html {
+    font-family: var(--font-body);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    margin: 0;
+  }
+
+  p,
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    max-width: 100%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img,
+  svg {
+    display: block;
+    vertical-align: middle;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-color: inherit;
+  }
+
+  main,
+  section,
+  article,
+  header,
+  footer,
+  div {
+    min-width: 0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-body);
+}
+
+.font-mono,
+.tabular-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-heading-balance {
+  font-size: clamp(1.65rem, 5.2vw, 3rem);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.text-pretty-wrap {
+  text-wrap: pretty;
+}
+
+/* ==========================================================================
+   2. EXPLICIT PRODUCTION UTILITY FALLBACKS (Standard Hex & Media Queries)
+   Ensures full styling across all browsers and Cloudflare Pages builds
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.pointer-events-none { pointer-events: none; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.top-3\.5 { top: 0.875rem; }
+.right-3 { right: 0.75rem; }
+.right-4 { right: 1rem; }
+.bottom-5 { bottom: 1.25rem; }
+.left-3\.5 { left: 0.875rem; }
+.left-4 { left: 1rem; }
+.z-30 { z-index: 30; }
+.z-50 { z-index: 50; }
+
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.inline-flex { display: inline-flex; }
+.flex { display: flex; }
+.grid { display: grid; }
+.table { display: table; }
+.hidden { display: none; }
+
+.flex-1 { flex: 1 1 0%; }
+.shrink-0 { flex-shrink: 0; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.self-start { align-self: flex-start; }
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.col-span-2 { grid-column: span 2 / span 2; }
+
+.gap-1 { gap: 0.25rem; }
+.gap-1\.5 { gap: 0.375rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-2\.5 { gap: 0.625rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-5 { gap: 1.25rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-x-2 { column-gap: 0.5rem; }
+.gap-y-1 { row-gap: 0.25rem; }
+
+.space-y-2 > :not(:first-child) { margin-top: 0.5rem; }
+.space-y-2\.5 > :not(:first-child) { margin-top: 0.625rem; }
+.space-y-3 > :not(:first-child) { margin-top: 0.75rem; }
+.space-y-6 > :not(:first-child) { margin-top: 1.5rem; }
+.space-y-16 > :not(:first-child) { margin-top: 4rem; }
+
+.divide-y > :not(:first-child) { border-top-width: 1px; border-top-style: solid; }
+.divide-slate-200 > :not(:first-child) { border-color: #e2e8f0; }
+
+.min-h-screen { min-height: 100vh; }
+.h-2\.5 { height: 0.625rem; }
+.h-3\.5 { height: 0.875rem; }
+.h-4 { height: 1rem; }
+.h-5 { height: 1.25rem; }
+.h-6 { height: 1.5rem; }
+.h-9 { height: 2.25rem; }
+.h-10 { height: 2.5rem; }
+.h-11 { height: 2.75rem; }
+.h-13 { height: 3.25rem; }
+.h-full { height: 100%; }
+.max-h-96 { max-height: 24rem; }
+
+.w-3\.5 { width: 0.875rem; }
+.w-4 { width: 1rem; }
+.w-5 { width: 1.25rem; }
+.w-6 { width: 1.5rem; }
+.w-9 { width: 2.25rem; }
+.w-full { width: 100%; }
+.min-w-0 { min-width: 0; }
+.max-w-56 { max-width: 14rem; }
+.max-w-md { max-width: 28rem; }
+.max-w-xl { max-width: 36rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-5xl { max-width: 64rem; }
+.max-w-6xl { max-width: 72rem; }
+.max-w-full { max-width: 100%; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mx-2 { margin-left: 0.5rem; margin-right: 0.5rem; }
+.my-10 { margin-top: 2.5rem; margin-bottom: 2.5rem; }
+.mt-0\.5 { margin-top: 0.125rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-2\.5 { margin-top: 0.625rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-3\.5 { margin-top: 0.875rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-10 { margin-top: 2.5rem; }
+.mt-16 { margin-top: 4rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-1\.5 { margin-bottom: 0.375rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-2\.5 { margin-bottom: 0.625rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-3\.5 { margin-bottom: 0.875rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-5 { margin-bottom: 1.25rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mb-12 { margin-bottom: 3rem; }
+
+.p-0\.5 { padding: 0.125rem; }
+.p-1 { padding: 0.25rem; }
+.p-1\.5 { padding: 0.375rem; }
+.p-3\.5 { padding: 0.875rem; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-3\.5 { padding-left: 0.875rem; padding-right: 0.875rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.pt-1\.5 { padding-top: 0.375rem; }
+.pt-2 { padding-top: 0.5rem; }
+.pt-3\.5 { padding-top: 0.875rem; }
+.pt-5 { padding-top: 1.25rem; }
+.pt-6 { padding-top: 1.5rem; }
+.pb-2\.5 { padding-bottom: 0.625rem; }
+.pb-5 { padding-bottom: 1.25rem; }
+.pb-6 { padding-bottom: 1.5rem; }
+.pl-10 { padding-left: 2.5rem; }
+.pr-4 { padding-right: 1rem; }
+.pr-10 { padding-right: 2.5rem; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-auto { overflow-y: auto; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.break-words { overflow-wrap: break-word; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+.list-decimal { list-style-type: decimal; }
+.list-inside { list-style-position: inside; }
+.border-collapse { border-collapse: collapse; }
+.cursor-pointer { cursor: pointer; }
+
+.rounded { border-radius: 0.25rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+
+.border { border-width: 1px; border-style: solid; }
+.border-t { border-top-width: 1px; border-top-style: solid; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-dashed { border-style: dashed; }
+
+.border-slate-100 { border-color: #f1f5f9; }
+.border-slate-200 { border-color: #e2e8f0; }
+.border-slate-200\/90 { border-color: rgba(226, 232, 240, 0.9); }
+.border-slate-300 { border-color: #cbd5e1; }
+.border-slate-700 { border-color: #334155; }
+.border-blue-200 { border-color: #bfdbfe; }
+.border-blue-600 { border-color: #2563eb; }
+.border-red-200 { border-color: #fecaca; }
+.border-red-300 { border-color: #fca5a5; }
+.border-red-400 { border-color: #f87171; }
+.border-emerald-400\/40 { border-color: rgba(52, 211, 153, 0.4); }
+
+.bg-white { background-color: #ffffff; }
+.bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+.bg-slate-50 { background-color: #f8fafc; }
+.bg-slate-100 { background-color: #f1f5f9; }
+.bg-slate-100\/70 { background-color: rgba(241, 245, 249, 0.7); }
+.bg-slate-200\/70 { background-color: rgba(226, 232, 240, 0.7); }
+.bg-slate-900 { background-color: #0f172a; }
+.bg-blue-50\/70 { background-color: rgba(239, 246, 255, 0.7); }
+.bg-blue-600 { background-color: #2563eb; }
+.bg-red-50 { background-color: #fef2f2; }
+.bg-red-600 { background-color: #dc2626; }
+.bg-amber-500 { background-color: #f59e0b; }
+.bg-emerald-500\/20 { background-color: rgba(16, 185, 129, 0.2); }
+
+.text-\[11px\] { font-size: 11px; line-height: 1.4; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }
+.underline { text-decoration: underline; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.leading-snug { line-height: 1.375; }
+.leading-relaxed { line-height: 1.625; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-white { color: #ffffff; }
+.text-slate-100 { color: #f1f5f9; }
+.text-slate-300 { color: #cbd5e1; }
+.text-slate-400 { color: #94a3b8; }
+.text-slate-500 { color: #64748b; }
+.text-slate-600 { color: #475569; }
+.text-slate-700 { color: #334155; }
+.text-slate-800 { color: #1e293b; }
+.text-slate-900 { color: #0f172a; }
+.text-blue-600 { color: #2563eb; }
+.text-blue-700 { color: #1d4ed8; }
+.text-blue-900 { color: #1e3a8a; }
+.text-emerald-400 { color: #34d399; }
+.text-emerald-600 { color: #059669; }
+.text-emerald-700 { color: #047857; }
+.text-amber-700 { color: #b45309; }
+.text-red-600 { color: #dc2626; }
+.text-red-700 { color: #b91c1c; }
+.text-red-900 { color: #7f1d1d; }
+
+.placeholder\:text-slate-400::placeholder { color: #94a3b8; }
+.selection\:bg-blue-600::selection,
+.selection\:bg-blue-600 ::selection { background-color: #2563eb; }
+.selection\:text-white::selection,
+.selection\:text-white ::selection { color: #ffffff; }
+
+.shadow-2xs { box-shadow: 0 1px 1px 0 rgba(15, 23, 42, 0.04); }
+.shadow-xs { box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.15), 0 4px 6px -4px rgba(15, 23, 42, 0.1); }
+.backdrop-blur-xs { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+
+.transition { transition: all 0.15s ease; }
+.transition-colors { transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease; }
+.transition-transform { transition: transform 0.15s ease; }
+.transition-all { transition: all 0.15s ease; }
+
+.hover\:border-blue-600:hover { border-color: #2563eb; }
+.hover\:border-slate-300:hover { border-color: #cbd5e1; }
+.hover\:bg-blue-600:hover { background-color: #2563eb; }
+.hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+.hover\:bg-slate-50:hover { background-color: #f8fafc; }
+.hover\:bg-slate-100:hover { background-color: #f1f5f9; }
+.hover\:bg-slate-200:hover { background-color: #e2e8f0; }
+.hover\:bg-slate-800:hover { background-color: #1e293b; }
+.hover\:text-blue-700:hover { color: #1d4ed8; }
+.hover\:text-blue-800:hover { color: #1e40af; }
+.hover\:text-slate-700:hover { color: #334155; }
+.hover\:text-slate-900:hover { color: #0f172a; }
+.hover\:text-white:hover { color: #ffffff; }
+.group:hover .group-hover\:text-blue-700 { color: #1d4ed8; }
+.group:hover .group-hover\:translate-x-0\.5 { transform: translateX(0.125rem); }
+
+.focus\:outline-none:focus { outline: none; }
+.focus\:bg-white:focus { background-color: #ffffff; }
+.focus\:border-blue-600:focus { border-color: #2563eb; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px #2563eb; }
+.focus\:ring-blue-600:focus { box-shadow: 0 0 0 2px #2563eb; }
+.focus\:ring-red-600:focus { box-shadow: 0 0 0 2px #dc2626; }
+.focus-visible\:underline:focus-visible { text-decoration: underline; }
+.focus-visible\:ring-2:focus-visible { box-shadow: 0 0 0 2px #2563eb; }
+.focus-visible\:ring-blue-600:focus-visible { box-shadow: 0 0 0 2px #2563eb; }
+
+@media (min-width: 640px) {
+  .sm\:left-4 { left: 1rem; }
+  .sm\:left-auto { left: auto; }
+  .sm\:right-6 { right: 1.5rem; }
+  .sm\:mt-4 { margin-top: 1rem; }
+  .sm\:mt-7 { margin-top: 1.75rem; }
+  .sm\:mt-8 { margin-top: 2rem; }
+  .sm\:flex { display: flex; }
+  .sm\:inline-flex { display: inline-flex; }
+  .sm\:hidden { display: none; }
+  .sm\:h-10 { height: 2.5rem; }
+  .sm\:h-12 { height: 3rem; }
+  .sm\:h-16 { height: 4rem; }
+  .sm\:w-10 { width: 2.5rem; }
+  .sm\:w-64 { width: 16rem; }
+  .sm\:w-auto { width: auto; }
+  .sm\:max-w-sm { max-width: 24rem; }
+  .sm\:shrink-0 { flex-shrink: 0; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sm\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .sm\:col-span-1 { grid-column: span 1 / span 1; }
+  .sm\:flex-row { flex-direction: row; }
+  .sm\:flex-wrap { flex-wrap: wrap; }
+  .sm\:items-center { align-items: center; }
+  .sm\:items-end { align-items: flex-end; }
+  .sm\:justify-between { justify-content: space-between; }
+  .sm\:gap-2 { gap: 0.5rem; }
+  .sm\:gap-6 { gap: 1.5rem; }
+  .sm\:p-2 { padding: 0.5rem; }
+  .sm\:p-6 { padding: 1.5rem; }
+  .sm\:p-8 { padding: 2rem; }
+  .sm\:p-10 { padding: 2.5rem; }
+  .sm\:px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .sm\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+  .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .sm\:py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .sm\:py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .sm\:py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+  .sm\:py-14 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .sm\:pl-12 { padding-left: 3rem; }
+  .sm\:text-xs { font-size: 0.75rem; line-height: 1rem; }
+  .sm\:text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+  .sm\:text-base { font-size: 1rem; line-height: 1.5rem; }
+  .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+  .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+  .sm\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+  .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+  .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+}
+
+@media (min-width: 768px) {
+  .md\:flex { display: flex; }
+  .md\:hidden { display: none; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .md\:col-span-1 { grid-column: span 1 / span 1; }
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:flex-row { flex-direction: row; }
+  .md\:items-center { align-items: center; }
+  .md\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+  .md\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lg\:gap-6 { gap: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+  <script id="schema-jsonld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"Selling Price Calculator","applicationCategory":"BusinessApplication","operatingSystem":"All","url":"https://calculafacil.example.com/en/tools/selling-price-calculator.html","inLanguage":"en","description":"Calculate the recommended selling price from your product cost and desired profit margin percentage. Includes profit amount and equivalent markup.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does the calculator reject a desired margin of 100% or higher?","acceptedAnswer":{"@type":"Answer","text":"Profit margin is the share of the selling price that remains after subtracting cost. Whenever cost is greater than zero, profit can never reach 100% of the selling price."}},{"@type":"Question","name":"Why is the calculated price higher than adding the percentage directly to cost?","acceptedAnswer":{"@type":"Answer","text":"Adding a percentage directly to cost gives you a markup, not a profit margin. To keep 25% of the final selling price as profit, you must mark up the cost by 33.33%."}},{"@type":"Question","name":"Does this include shipping or packaging costs?","acceptedAnswer":{"@type":"Answer","text":"For the most accurate pricing, include all direct unit costs—such as manufacturing, packaging, and inbound freight—inside your product cost input."}},{"@type":"Question","name":"Can I enter decimal margin percentages?","acceptedAnswer":{"@type":"Answer","text":"Yes, decimal margins such as 18.5% or 42.25% are fully supported."}}]}]}</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+  <div id="root">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/en/index.html" class="brand-logo">CalculaFácil</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/en/index.html">Home</a>
+          <a href="/en/tools/index.html">All Tools</a>
+          <a href="/en/index.html#categories">Categories</a>
+          <a href="/en/about.html">About</a>
+          <a href="/en/contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switcher desktop-lang" role="group" aria-label="Language selector">
+            <a href="/es/herramientas/calculadora-precio-venta.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+            <a href="/en/tools/selling-price-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+          </div>
+          <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-expanded="false">
+            Menu
+          </button>
+        </div>
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-label">Language</span>
+          <div class="lang-switcher" role="group" aria-label="Language selector">
+            <a href="/es/herramientas/calculadora-precio-venta.html" data-set-lang="es" class="lang-link ">ES · Español</a>
+            <a href="/en/tools/selling-price-calculator.html" data-set-lang="en" class="lang-link active">EN · English</a>
+          </div>
+        </div>
+      </div>
+      <nav id="mobile-nav-drawer" class="mobile-nav" aria-label="Mobile menu">
+        <a href="/en/index.html">Home</a>
+        <a href="/en/tools/index.html">All Tools</a>
+        <a href="/en/index.html#categories">Categories</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/index.html">Home</a> /
+        <a href="/en/tools/index.html">All Tools</a> /
+        <span>Selling Price Calculator</span>
+      </nav>
+
+      <header style="margin-bottom:1.5rem;">
+        <div class="card-meta">Business &amp; Sales</div>
+        <h1>Selling Price Calculator</h1>
+        <p style="color:var(--text-secondary);max-width:48rem;">Avoid the common pricing mistake of confusing markup with profit margin. Enter your product cost and desired profit margin percentage to calculate the exact selling price required to hit your target margin.</p>
+      </header>
+
+      <div id="hf-calculator-root" data-tool-id="selling-price" class="calc-panel">
+      <div class="currency-bar">
+        <div>
+          <label for="hf-currency-select" style="font-weight:600;font-size:0.8125rem;display:block;">Display currency</label>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Note: Currency selection changes display formatting and symbol only. It does not perform foreign exchange conversion.</span>
+        </div>
+        <select id="hf-currency-select" class="form-control" style="max-width:16rem;">
+          <option value="EUR">Euro (EUR €)</option><option value="USD">US Dollar (USD $)</option><option value="MXN">Mexican Peso (MXN $)</option><option value="ARS">Argentine Peso (ARS $)</option><option value="COP">Colombian Peso (COP $)</option><option value="CLP">Chilean Peso (CLP $)</option><option value="GBP">British Pound (GBP £)</option><option value="PKR">Pakistani Rupee (PKR Rs)</option>
+        </select>
+      </div>
+      <div class="form-grid form-grid-2">
+        <div class="form-group">
+          <label for="in-cost">Product cost</label>
+          <input id="in-cost" type="number" step="any" min="0" value="70" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="in-margin">Desired profit margin (%)</label>
+          <input id="in-margin" type="number" step="any" min="0" max="99.99" value="30" class="form-control" />
+        </div>
+      </div>
+      <div id="hf-calc-error" class="error-box" style="display:none;" role="alert"></div>
+      <div id="hf-calc-results" class="results-area">
+        <div class="results-grid">
+          <div class="result-box highlight"><span class="result-label">Recommended selling price</span><span id="out-selling" class="result-value">100,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Profit amount</span><span id="out-profit" class="result-value">30,00 EUR (€)</span></div>
+          <div class="result-box"><span class="result-label">Markup (%)</span><span id="out-markup" class="result-value">42,86%</span></div>
+        </div>
+      </div>
+      <div class="calc-actions">
+      <div class="btn-group">
+        <button type="button" id="hf-btn-calc" class="btn btn-primary">Calculate now</button>
+        <button type="button" id="hf-btn-reset" class="btn btn-secondary">Reset</button>
+      </div>
+      <button type="button" id="hf-btn-copy" class="btn btn-subtle">Copy results</button>
+    </div>
+    <div id="hf-copy-toast" class="copy-toast" role="status" aria-live="polite">
+      <span>&#10003; Copied to clipboard</span>
+    </div>
+    </div>
+
+      <div class="grid-2" style="margin-bottom:2rem;">
+        <section class="card">
+          <div>
+            <h2>How to calculate your selling price</h2>
+            <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:0.9375rem;">
+              <li style="margin-bottom:0.5rem;">Select your display currency.</li><li style="margin-bottom:0.5rem;">Enter the unit cost of your product or service (must be greater than zero).</li><li style="margin-bottom:0.5rem;">Enter your desired profit margin percentage (must be less than 100%).</li><li style="margin-bottom:0.5rem;">View the recommended selling price, profit per unit, and equivalent markup percentage.</li>
+            </ol>
+            <h3 style="margin-top:1.25rem;">Practical example</h3>
+            <p>If your product cost is 70.00 USD and you want a 30% profit margin: Selling Price = 70 / (1 − 0.30) = 100.00 USD. You earn 30.00 USD profit per unit, which equals a 42.86% markup on cost.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div>
+            <h2>Selling price formula</h2>
+            <div class="formula-box">
+              <div>Selling Price = Cost / (1 − (Desired Margin / 100))</div><div>Profit = Selling Price − Cost</div><div>Equivalent Markup (%) = (Profit / Cost) × 100</div>
+            </div>
+            <p>If a product costs 100 USD and you simply add 30% to sell at 130 USD, your actual profit margin is only 23.08% (30 / 130). Dividing 100 by (1 − 0.30) yields 142.86 USD, guaranteeing a true 30% profit margin.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="ad-placeholder" aria-label="Optional advertisement space (Reserved container)">
+        <strong>Optional advertisement space (Reserved container)</strong>
+        <div>Clean static placeholder container reserved for future ad integration, kept well away from calculator inputs and results.</div>
+      </aside>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently asked questions for this tool</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card"><div><h3>Why does the calculator reject a desired margin of 100% or higher?</h3><p>Profit margin is the share of the selling price that remains after subtracting cost. Whenever cost is greater than zero, profit can never reach 100% of the selling price.</p></div></div>
+          <div class="card"><div><h3>Why is the calculated price higher than adding the percentage directly to cost?</h3><p>Adding a percentage directly to cost gives you a markup, not a profit margin. To keep 25% of the final selling price as profit, you must mark up the cost by 33.33%.</p></div></div>
+          <div class="card"><div><h3>Does this include shipping or packaging costs?</h3><p>For the most accurate pricing, include all direct unit costs—such as manufacturing, packaging, and inbound freight—inside your product cost input.</p></div></div>
+          <div class="card"><div><h3>Can I enter decimal margin percentages?</h3><p>Yes, decimal margins such as 18.5% or 42.25% are fully supported.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Related tools</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></h3>
+                  <p>Calculate gross profit amount, profit margin percentage on sales, and markup percentage on cost.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/profit-margin-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/discount-calculator.html">Discount Calculator</a></h3>
+                  <p>Calculate the exact discount amount, final sale price, and percentage saved on any purchase or quote.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/discount-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+          <article class="card">
+                <div>
+                  <h3><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></h3>
+                  <p>Find how many units and how much revenue you need to cover all fixed and variable business costs.</p>
+                </div>
+                <div class="card-footer"><a href="/en/tools/break-even-calculator.html">Open calculator &rarr;</a></div>
+              </article>
+        </div>
+      </section>
+    </div>
+  
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <strong class="brand-logo">CalculaFácil</strong>
+            <p style="margin-top:0.5rem;font-weight:600;color:var(--accent);">Calculate easily. Free tools for everyday life.</p>
+            <p>CalculaFácil provides practical everyday business calculators, loan and salary estimators, and text tools in Spanish and English. Fast, transparent, and free.</p>
+            <p style="font-size:0.75rem;color:var(--text-muted);">All calculators run directly in your browser. No account or registration required.</p>
+          </div>
+          <div>
+            <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">All 10 Tools</h2>
+            <ul class="footer-links footer-links-2col">
+              <li><a href="/en/tools/profit-margin-calculator.html">Profit Margin Calculator</a></li>
+              <li><a href="/en/tools/selling-price-calculator.html">Selling Price Calculator</a></li>
+              <li><a href="/en/tools/break-even-calculator.html">Break-Even Calculator</a></li>
+              <li><a href="/en/tools/hourly-cost-calculator.html">Hourly Cost Calculator</a></li>
+              <li><a href="/en/tools/commission-calculator.html">Commission Calculator</a></li>
+              <li><a href="/en/tools/discount-calculator.html">Discount Calculator</a></li>
+              <li><a href="/en/tools/word-counter.html">Word Counter</a></li>
+              <li><a href="/en/tools/character-counter.html">Character Counter</a></li>
+              <li><a href="/en/tools/bank-loan-calculator.html">Bank Loan / EMI Calculator</a></li>
+              <li><a href="/en/tools/salary-calculator.html">Salary Calculator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Trust &amp; Legal</h2>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Us</a></li>
+              <li><a href="/en/contact.html">Contact</a></li>
+              <li><a href="/en/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="/en/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+              <li><a href="/en/legal-disclaimer.html">Legal Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 CalculaFácil. All rights reserved.</span>
+          <span>Contact: <strong class="mono">contacto@calculafacil.example.com</strong></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/assets/app.js"></script>
+  <script src="/js/language.js"></script>
+  <script src="/js/calculators.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
