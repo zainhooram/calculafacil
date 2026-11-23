@@ -194,6 +194,23 @@ function runCalculatorTests() {
       assert(distContent.length > 5000, `Truncated dist file: ${distFile}`);
       assert(distContent.includes('CalculaFácil'), `Missing CalculaFácil brand in ${distFile}`);
       assert(!distContent.includes('HerramientasFáciles'), `Found old brand in ${distFile}`);
+      assert(!distContent.includes('example.com'), `Found placeholder example.com URL in ${distFile}`);
+      assert(
+        distContent.includes(`rel="canonical" href="https://calculafacil-6dj.pages.dev/${rel}"`),
+        `Missing or incorrect canonical URL in ${distFile}`
+      );
+      assert(
+        distContent.includes(`rel="alternate" hreflang="es" href="https://calculafacil-6dj.pages.dev/${esRel}"`),
+        `Missing or incorrect es hreflang URL in ${distFile}`
+      );
+      assert(
+        distContent.includes(`rel="alternate" hreflang="en" href="https://calculafacil-6dj.pages.dev/${enRel}"`),
+        `Missing or incorrect en hreflang URL in ${distFile}`
+      );
+      assert(
+        distContent.includes(`property="og:url" content="https://calculafacil-6dj.pages.dev/${rel}"`),
+        `Missing or incorrect og:url in ${distFile}`
+      );
       assert(distContent.includes('id="cf-inline-styles"'), `Missing inline CSS in ${distFile}`);
       assert(distContent.includes('<div id="root">'), `Missing #root container in ${distFile}`);
 
@@ -216,6 +233,32 @@ function runCalculatorTests() {
     }
   }
 
+  // Verify sitemap.xml and robots.txt in dist/, public/, and root
+  for (const base of [process.cwd(), path.join(process.cwd(), 'public'), distDir]) {
+    const sitemapFile = path.join(base, 'sitemap.xml');
+    const robotsFile = path.join(base, 'robots.txt');
+    assert(fs.existsSync(sitemapFile), `Missing sitemap.xml in ${base}`);
+    assert(fs.existsSync(robotsFile), `Missing robots.txt in ${base}`);
+
+    const sitemapXml = fs.readFileSync(sitemapFile, 'utf8');
+    const robotsTxt = fs.readFileSync(robotsFile, 'utf8');
+    assert(!sitemapXml.includes('example.com'), `Found example.com in ${sitemapFile}`);
+    assert(!robotsTxt.includes('example.com'), `Found example.com in ${robotsFile}`);
+    assert(
+      robotsTxt.includes('Sitemap: https://calculafacil-6dj.pages.dev/sitemap.xml'),
+      `Incorrect Sitemap URL in ${robotsFile}`
+    );
+
+    const locMatches = [...sitemapXml.matchAll(/<loc>(https:\/\/calculafacil-6dj\.pages\.dev\/[^<]+)<\/loc>/g)];
+    assert.strictEqual(locMatches.length, 34, `Expected 34 valid <loc> URLs in ${sitemapFile}, found ${locMatches.length}`);
+  }
+
+  assert(!distIndexHtml.includes('example.com'), 'Found example.com in dist/index.html');
+  assert(
+    distIndexHtml.includes('https://calculafacil-6dj.pages.dev/'),
+    'Missing https://calculafacil-6dj.pages.dev/ in dist/index.html'
+  );
+
   const distHeaders = path.join(distDir, '_headers');
   assert(fs.existsSync(distHeaders), 'Missing dist/_headers for Cloudflare Pages MIME enforcement');
   assert(
@@ -223,7 +266,7 @@ function runCalculatorTests() {
     'Missing text/css Content-Type rule in dist/_headers'
   );
 
-  console.log('ALL 10 CALCULATORS, 34 STATIC BILINGUAL PAGES, AND ALL PRODUCTION CSS PATHS PASSED VERIFICATION.');
+  console.log('ALL 10 CALCULATORS, 34 STATIC BILINGUAL PAGES, SEO DOMAIN (calculafacil-6dj.pages.dev), AND PRODUCTION CSS PATHS PASSED VERIFICATION.');
 }
 
 runCalculatorTests();
